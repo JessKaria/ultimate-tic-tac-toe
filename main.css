@@ -27,8 +27,8 @@ h1 {
 
 button {
   background-color: white;
-  width: 250px;
-  height: 90px;
+  width: 200px;
+  height: 60px;
   padding: 15px;
   margin: 10px;
   color: black;
@@ -57,20 +57,20 @@ button {
   width: 33.3%;
 }
 
-.grid div.one {
+.grid div.X {
   background-image: url("1.png");
   background-size: cover;
 }
 
-.grid div.two {
+.grid div.O {
   background-image: url("2.png");
   background-size: cover;
 }
 
 
-#player1score {
-  width: 250px;
-  height: 90px;
+#scoreboard {
+  width: 200px;
+  height: 60px;
   padding: 15px;
   margin: 10px;
   background-color: white;
@@ -78,17 +78,5 @@ button {
   border-width: 1px;
   border-color: #fe5000;
 }
-
-#player2score {
-  width: 250px;
-  height: 90px;
-  padding: 15px;
-  margin: 10px;
-  background-color: white;
-  color: #fe5000;
-  border-width: 1px;
-  border-color: #fe5000;
-}
-
 
 

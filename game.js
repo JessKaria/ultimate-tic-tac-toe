@@ -1,15 +1,12 @@
-const player1Choices = []
-//console.log(player1Choices)
-const player2Choices = []
-//console.log(player2Choices)
-
-const one = 'one'
-const two = 'two'
+const playerXChoices = []
+console.log(playerXChoices)
+const playerOChoices = []
+console.log(playerOChoices)
+const one = 'O'
+const two = 'X'
 let playerTurn = true
-
-//const player1score = document.document.querySelector('#player1score')
+const scoreboard = document.querySelector('#scoreboard')
 //console.log(player1score)
-//const player2score = document.getElementsByClassName('.player2score')
 //console.log(player2score)
 //console.log(playerTurn)
 //const player1BoardsWon = 0
@@ -19,56 +16,92 @@ let playerTurn = true
 const gameCells = Array.from(document.querySelectorAll('.grid div'))
 //console.log(gameCells)
 
-
-const button = document.querySelector('button')
-console.log(button)
-
-const combo1 = [0, 1, 2]
-const combo2 = [3, 4, 5]
-const combo3 = [6, 7, 8]
-const combo4 = [0, 3, 6]
-const combo5 = [1, 4, 7]
-const combo6 = [2, 5, 8]
-const combo7 = [0, 4, 8]
-const combo8 = [2, 4, 6]
+//const button = document.querySelector('button')
+//console.log('hello)
 
 
-
-function checkForWin() {
-  if (player1Choices === combo1 || player1Choices === combo2 || player1Choices === combo3 || player1Choices === combo4 || player1Choices === combo5 
-    || player1Choices === combo6 || player1Choices === combo7 || player1Choices === combo8) {
-    console.log('player 1 wins')
-  } else if (player2Choices === combo1 || player2Choices === combo2 || player2Choices === combo3 || player2Choices === combo4 || player2Choices === combo5 
-      || player2Choices === combo6 || player2Choices === combo7 || player2Choices === combo8) {
-    console.log('player 1 wins')
-  }
-}
-
+const boardOneArray = [
+  [0, 1, 2],
+  [3, 4, 5],
+  [6, 7, 8],
+  [0, 3, 6],
+  [1, 4, 7],
+  [2, 5, 8],
+  [0, 4, 8],
+  [2, 4, 6]
+]
 
 
 //Add event listener to all cells
 gameCells.forEach((cell) => {
-  cell.addEventListener('click', choices) 
-  
+  cell.addEventListener('click', choices)  
 })
 
 function choices(event) {
+  const playerCounter = playerTurn ? one : two
+  //console.log(playerCounter)
+  //console.log(playerCounter)
+  const cell = event.target.id
+  //get cell id to update arrays
+  const cellStyle = event.target
+  //console.log(cellStyle)
+  cellStyle.classList.add(playerCounter)
   //console.log(cell)
-  const currentCell = playerTurn ? one : two
-  //console.log(currentCell)
-  const cell = event.target
-  cell.classList.add(currentCell)
   //add the class of current cell
-  console.log(currentCell.target.id)
   playerTurn = !playerTurn
   //switch da current player using playerTurn Boolean
+  const cellNumber = parseFloat(cell)
   if (playerTurn === true) {
-    player1Choices.push(cell)
+    playerXChoices.push(cellNumber)
   } else {
-    player2Choices.push(cell)
-    //push the cell number to the player 1 + player 2 saved choices array
-    checkForWin()
+    playerOChoices.push(cellNumber)
+    //push the cell number to the player 1 + player 2 saved choices array // this isnt working 
   }
+  checkForWinner()
+  
 }
 
+
+
+function checkForWinner () {
+
+
+  if (boardOneArray[0].every(r => playerXChoices.includes(r))){
+    scoreboard.innerHTML = 'XZIBIT WINS'
+  } else if (boardOneArray[0].every(r => playerOChoices.includes(r))) {
+    scoreboard.innerHTML = 'Oooox WINS'
+  } else if (boardOneArray[1].every(r => playerXChoices.includes(r))) {
+    scoreboard.innerHTML = 'XZIBIT WINS'
+  } else if (boardOneArray[1].every(r => playerOChoices.includes(r))) {
+    scoreboard.innerHTML = 'Oooox WINS'
+  } else if (boardOneArray[2].every(r => playerXChoices.includes(r))) {
+    scoreboard.innerHTML = 'XZIBIT WINS'
+  } else if (boardOneArray[2].every(r => playerOChoices.includes(r))) {
+    scoreboard.innerHTML = 'Oooox WINS'
+  } else if (boardOneArray[3].every(r => playerXChoices.includes(r))) {
+    scoreboard.innerHTML = 'XZIBIT WINS'
+  } else if (boardOneArray[3].every(r => playerOChoices.includes(r))) {
+    scoreboard.innerHTML = 'Oooox WINS'
+  } else if (boardOneArray[4].every(r => playerXChoices.includes(r))) {
+    scoreboard.innerHTML = 'XZIBIT WINS'
+  } else if (boardOneArray[4].every(r => playerOChoices.includes(r))) {
+    scoreboard.innerHTML = 'Oooox WINS'
+  } else if (boardOneArray[5].every(r => playerXChoices.includes(r))) {
+    scoreboard.innerHTML = 'XZIBIT WINS'
+  } else if (boardOneArray[5].every(r => playerOChoices.includes(r))) {
+    scoreboard.innerHTML = 'Oooox WINS'
+  } else if (boardOneArray[6].every(r => playerXChoices.includes(r))) {
+    scoreboard.innerHTML = 'XZIBIT WINS'
+  } else if (boardOneArray[6].every(r => playerOChoices.includes(r))) {
+    scoreboard.innerHTML = 'Oooox WINS'
+  } else if (boardOneArray[7].every(r => playerXChoices.includes(r))) {
+    scoreboard.innerHTML = 'XZIBIT WINS'
+  } else if (boardOneArray[7].every(r => playerOChoices.includes(r))) {
+    scoreboard.innerHTML = 'Oooox WINS'
+  } else if (boardOneArray[8].every(r => playerXChoices.includes(r))) {
+    scoreboard.innerHTML = 'XZIBIT WINS'
+  } else if (boardOneArray[8].every(r => playerOChoices.includes(r))) {
+    scoreboard.innerHTML = 'Oooox WINS'
+  }
+}
 
