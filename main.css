@@ -8,7 +8,8 @@ body {
   flex-direction: column;
   height: 100vh;
   justify-content: center;
-  margin: 0;
+  margin: 10px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: whitesmoke;
   background-image: url(./marble.png);
 }
@@ -42,19 +43,21 @@ button {
   display: flex;
   flex-wrap: wrap;
   margin: 25px;
-  border-radius: 3px;
+  
+
 }
 
 .div {
-  border: 1px solid rgb(255, 255, 255);
+  border: 0px solid rgb(255, 255, 255);
   font-size: 25px;
 }
 
 .grid div {
-  border: 1px solid lightgrey;
+  border: 5px solid lightgrey;
   flex-grow: 1;
-  height: 33.3%;
-  width: 33.3%;
+  height: 11.1%;
+  width: 11.1%;
+ 
 }
 
 .grid div.X {
@@ -67,6 +70,9 @@ button {
   background-size: cover;
 }
 
+/* .one  {
+  pointer-events: none;
+} */
 
 #scoreboard {
   width: 200px;
