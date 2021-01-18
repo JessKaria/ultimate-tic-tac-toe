@@ -11,7 +11,7 @@ body {
   margin: 10px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: whitesmoke;
-  background-image: url(./marble.png);
+  background-color: rgb(32, 35, 206);
 }
 
 main {
@@ -43,21 +43,20 @@ button {
   display: flex;
   flex-wrap: wrap;
   margin: 25px;
-  
-
 }
+
 
 .div {
   border: 0px solid rgb(255, 255, 255);
   font-size: 25px;
 }
 
+
 .grid div {
   border: 5px solid lightgrey;
   flex-grow: 1;
   height: 11.1%;
   width: 11.1%;
- 
 }
 
 .grid div.X {
@@ -70,9 +69,45 @@ button {
   background-size: cover;
 }
 
-/* .one  {
+.one   {
   pointer-events: none;
-} */
+  background-color: red
+}
+
+.two   {
+  pointer-events: none;
+  background-color: red
+}
+
+.three   {
+  pointer-events: none;
+  background-color: red
+}
+
+.four   {
+  pointer-events: none;
+  background-color: red
+}
+
+.five   {
+  pointer-events: none;
+  background-color: red
+}
+
+.six   {
+  pointer-events: none;
+  background-color: red
+}
+
+.seven   {
+  pointer-events: none;
+  background-color: red
+}
+
+.eight   {
+  pointer-events: none;
+  background-color: red
+}
 
 #scoreboard {
   width: 200px;

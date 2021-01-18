@@ -1,7 +1,7 @@
 const playerXChoices = []
-console.log(playerXChoices)
+//console.log(playerXChoices)
 const playerOChoices = []
-console.log(playerOChoices)
+//console.log(playerOChoices)
 const one = 'O'
 const two = 'X'
 let playerTurn = true
@@ -151,12 +151,21 @@ const lastMove = [
 
 
 
-
+// function nextMove {
+//   if (lastMove[0].every(r => playerOChoices.includes(r))) {
+//     cell.classList.toggle('one')
+//   } else if (boardZeroArray[0].every(r => playerXChoices.includes(r))) {
+//     scoreboard.innerHTML = 'Player X Wins Board One!'
+// }
 
 
 //Add event listener to all cells and make it clickable
 gameCells.forEach((cell) => {
   cell.addEventListener('click', choices)
+  if (lastMove[1].includes(playerOChoices)) {
+    cell.classList.remove('one')
+    console.log(cell)
+  }
 })
 
 function choices(event) {
@@ -167,7 +176,7 @@ function choices(event) {
   const cellStyle = event.target
   //console.log(cellStyle)
   cellStyle.classList.add(playerCounter)
-  console.log(cell)
+  //console.log(cell)
   //add the class of current cell
   playerTurn = !playerTurn
   //switch da current player using playerTurn Boolean
@@ -188,16 +197,13 @@ function choices(event) {
   checkBoardSix() 
   checkBoardSeven() 
   checkBoardEight()
-  
 }
 
 function checkBoardZero() {
   if (boardZeroArray[0].every(r => playerOChoices.includes(r))) {
     scoreboard.innerHTML = 'Player O Wins Board One!'
-    player1BoardsWon + 1
   } else if (boardZeroArray[0].every(r => playerXChoices.includes(r))) {
     scoreboard.innerHTML = 'Player X Wins Board One!'
-    player2BoardsWon + 1
   } else if (boardZeroArray[1].every(r => playerOChoices.includes(r))) {
     scoreboard.innerHTML = 'Player O Wins Board One!'
   } else if (boardZeroArray[1].every(r => playerXChoices.includes(r))) {
