@@ -8,10 +8,10 @@ body {
   flex-direction: column;
   height: 100vh;
   justify-content: center;
-  margin: 10px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: whitesmoke;
-  background-color: rgb(32, 35, 206);
+  background: linear-gradient(to left, #DB162F 0%,#DB162F 50%,#DB162F 50%,#0075F2 50%, #0075F2 100%); /* W3C */
+
 }
 
 main {
@@ -23,7 +23,7 @@ main {
 
 
 h1 {
-  font-family: monospace;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 button {
@@ -34,6 +34,15 @@ button {
   margin: 10px;
   color: black;
 }
+
+aside {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+}
+
 
 .grid {
   box-shadow: 0 0 20px 0 #fe5000;
@@ -69,55 +78,38 @@ button {
   background-size: cover;
 }
 
-.one   {
+.endplay {
   pointer-events: none;
-  background-color: red
-}
+  background-color: #000000;
+} 
 
-.two   {
+.mayo {
   pointer-events: none;
-  background-color: red
-}
+  background-color: #0075F2;
+} 
 
-.three   {
+.hotsauce {
   pointer-events: none;
-  background-color: red
-}
+  background-color: #DB162F
+} 
 
-.four   {
-  pointer-events: none;
-  background-color: red
-}
+.hotsauce {
+  background-image: url("/test.png");
+} 
 
-.five   {
-  pointer-events: none;
-  background-color: red
-}
 
-.six   {
-  pointer-events: none;
-  background-color: red
-}
-
-.seven   {
-  pointer-events: none;
-  background-color: red
-}
-
-.eight   {
-  pointer-events: none;
-  background-color: red
-}
 
 #scoreboard {
   width: 200px;
   height: 60px;
-  padding: 15px;
+  padding: 10px;
+  text-align: center;
   margin: 10px;
   background-color: white;
   color: #fe5000;
   border-width: 1px;
   border-color: #fe5000;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 

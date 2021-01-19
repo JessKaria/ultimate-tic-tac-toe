@@ -26,14 +26,14 @@ const boardZeroArray = [
   [1, 10, 19],
   [2, 11, 20],
   [0, 10, 20],
-  [2, 10, 19]
+  [2, 10, 18]
 ]
 
 const boardOneArray = [
   [3, 4, 5],
   [12, 13, 14],
   [21, 22, 23],
-  [3, 12, 22],
+  [3, 12, 21],
   [4, 13, 22],
   [5, 14, 23],
   [3, 13, 23],
@@ -70,7 +70,7 @@ const boardFourArray = [
   [31, 40, 49],
   [32, 41, 50],
   [30, 40, 50],
-  [32, 40, 48]
+  [30, 40, 50]
 ]
 
 
@@ -79,7 +79,7 @@ const boardFiveArray = [
   [42, 43, 44],
   [51, 52, 53],
   [33, 42, 51],
-  [34, 43, 42],
+  [34, 43, 52],
   [35, 44, 53],
   [33, 43, 53],
   [35, 43, 51]
@@ -118,23 +118,6 @@ const boardEightArray = [
   [62, 70, 78]
 ]
 
-
-
-//------LIVE BOARDS BOARD MOVEMENT--------//
-
-// const nextMove = [
-//   [0, 1, 2, 9, 10, 11, 18, 19, 20],
-//   [3, 4, 5, 12, 13, 14, 21, 22, 23],
-//   [6, 7, 8, 15, 16, 17, 24, 25, 26],
-//   [27, 28, 29, 36, 37, 38, 45, 46, 47],
-//   [30, 31, 32, 39, 40, 41, 48, 49, 50],
-//   [33, 34, 35, 42, 43, 44, 51, 52, 53],
-//   [54, 55, 56, 63, 64, 65, 72, 73, 74],
-//   [57, 58, 59, 66, 67, 68, 75, 76, 77],
-//   [60, 61, 62, 69, 70, 71, 78, 79, 80]
-// ]
-
-
 //------DICTATATES THE NEXT MOVE MUST BE MADE IN--------//
 
 const lastMove = [
@@ -149,23 +132,316 @@ const lastMove = [
   [20, 23, 26, 47, 50, 53, 74, 77, 80]
 ]
 
+//<-----SELECTING THE CLASSES OF THE DIFFERENT BOARDS------>//
+
+const boardOne = Array.from(document.querySelectorAll('.one'))
+const boardTwo = Array.from(document.querySelectorAll('.two'))
+const boardThree = Array.from(document.querySelectorAll('.three'))
+const boardFour = Array.from(document.querySelectorAll('.four'))
+const boardFive = Array.from(document.querySelectorAll('.five'))
+const boardSix = Array.from(document.querySelectorAll('.six'))
+const boardSeven = Array.from(document.querySelectorAll('.seven'))
+const boardEight = Array.from(document.querySelectorAll('.eight'))
+const boardNine = Array.from(document.querySelectorAll('.nine'))
+
+function cleanUp() {
+  boardOne.forEach(e => {
+    e.classList.remove('endplay')
+  })
+  boardTwo.forEach(e => {
+    e.classList.remove('endplay')
+  })
+  boardThree.forEach(e => {
+    e.classList.remove('endplay')
+  })
+  boardFour.forEach(e => {
+    e.classList.remove('endplay')
+  })
+  boardFive.forEach(e => {
+    e.classList.remove('endplay')
+  })
+  boardSix.forEach(e => {
+    e.classList.remove('endplay')
+  })
+  boardSeven.forEach(e => {
+    e.classList.remove('endplay')
+  })
+  boardEight.forEach(e => {
+    e.classList.remove('endplay')
+  })
+  boardNine.forEach(e => {
+    e.classList.remove('endplay')
+  })
+}
 
 
-// function nextMove {
-//   if (lastMove[0].every(r => playerOChoices.includes(r))) {
-//     cell.classList.toggle('one')
-//   } else if (boardZeroArray[0].every(r => playerXChoices.includes(r))) {
-//     scoreboard.innerHTML = 'Player X Wins Board One!'
-// }
+function oneMove(cellNumber) {
+  if (lastMove[0].includes(cellNumber)) {
+    boardTwo.forEach(e => {
+      e.classList.add('endplay')
+    })
+    boardThree.forEach(e => {
+      e.classList.add('endplay')
+    })
+    boardFour.forEach(e => {
+      e.classList.add('endplay')
+    })
+    boardFive.forEach(e => {
+      e.classList.add('endplay')
+    })
+    boardSix.forEach(e => {
+      e.classList.add('endplay')
+    })
+    boardSeven.forEach(e => {
+      e.classList.add('endplay')
+    })
+    boardEight.forEach(e => {
+      e.classList.add('endplay')
+    })
+    boardNine.forEach(e => {
+      e.classList.add('endplay')
+    })
+  }
+}
 
+function twoMove(cellNumber) {
+  if (lastMove[1].includes(cellNumber)) {
+    boardOne.forEach(e => {
+      e.classList.add('endplay')
+    })
+    boardThree.forEach(e => {
+      e.classList.add('endplay')
+    })
+    boardFour.forEach(e => {
+      e.classList.add('endplay')
+    })
+    boardFive.forEach(e => {
+      e.classList.add('endplay')
+    })
+    boardSix.forEach(e => {
+      e.classList.add('endplay')
+    })
+    boardSeven.forEach(e => {
+      e.classList.add('endplay')
+    })
+    boardEight.forEach(e => {
+      e.classList.add('endplay')
+    })
+    boardNine.forEach(e => {
+      e.classList.add('endplay')
+    })
+  }
+}
+
+function threeMove(cellNumber) {
+  if (lastMove[2].includes(cellNumber)) {
+    boardOne.forEach(e => {
+      e.classList.add('endplay')
+    })
+    boardTwo.forEach(e => {
+      e.classList.add('endplay')
+    })
+    boardFour.forEach(e => {
+      e.classList.add('endplay')
+    })
+    boardFive.forEach(e => {
+      e.classList.add('endplay')
+    })
+    boardSix.forEach(e => {
+      e.classList.add('endplay')
+    })
+    boardSeven.forEach(e => {
+      e.classList.add('endplay')
+    })
+    boardEight.forEach(e => {
+      e.classList.add('endplay')
+    })
+    boardNine.forEach(e => {
+      e.classList.add('endplay')
+    })
+  }
+}
+
+function fourMove(cellNumber) {
+  if (lastMove[3].includes(cellNumber)) {
+    boardOne.forEach(e => {
+      e.classList.add('endplay')
+    }) 
+    boardTwo.forEach(e => {
+      e.classList.add('endplay')
+    }) 
+    boardThree.forEach(e => {
+      e.classList.add('endplay')
+    }) 
+    boardFive.forEach(e => {
+      e.classList.add('endplay')
+    }) 
+    boardSix.forEach(e => {
+      e.classList.add('endplay')
+    }) 
+    boardSeven.forEach(e => {
+      e.classList.add('endplay')
+    }) 
+    boardEight.forEach(e => {
+      e.classList.add('endplay')
+    }) 
+    boardNine.forEach(e => {
+      e.classList.add('endplay')
+    }) 
+  } 
+}
+
+function fiveMove(cellNumber) {
+  if (lastMove[4].includes(cellNumber)) {
+    boardOne.forEach(e => {
+      e.classList.add('endplay')
+    }) 
+    boardTwo.forEach(e => {
+      e.classList.add('endplay')
+    }) 
+    boardThree.forEach(e => {
+      e.classList.add('endplay')
+    }) 
+    boardFour.forEach(e => {
+      e.classList.add('endplay')
+    }) 
+    boardSix.forEach(e => {
+      e.classList.add('endplay')
+    }) 
+    boardSeven.forEach(e => {
+      e.classList.add('endplay')
+    }) 
+    boardEight.forEach(e => {
+      e.classList.add('endplay')
+    }) 
+    boardNine.forEach(e => {
+      e.classList.add('endplay')
+    }) 
+  } 
+}
+
+function sixMove(cellNumber) {
+  if (lastMove[5].includes(cellNumber)) {
+    boardOne.forEach(e => {
+      e.classList.add('endplay')
+    }) 
+    boardTwo.forEach(e => {
+      e.classList.add('endplay')
+    }) 
+    boardThree.forEach(e => {
+      e.classList.add('endplay')
+    }) 
+    boardFour.forEach(e => {
+      e.classList.add('endplay')
+    }) 
+    boardFive.forEach(e => {
+      e.classList.add('endplay')
+    }) 
+    boardSeven.forEach(e => {
+      e.classList.add('endplay')
+    }) 
+    boardEight.forEach(e => {
+      e.classList.add('endplay')
+    }) 
+    boardNine.forEach(e => {
+      e.classList.add('endplay')
+    }) 
+  } 
+}
+
+function sevenMove(cellNumber) {
+  if (lastMove[6].includes(cellNumber)) {
+    boardOne.forEach(e => {
+      e.classList.add('endplay')
+    }) 
+    boardTwo.forEach(e => {
+      e.classList.add('endplay')
+    }) 
+    boardThree.forEach(e => {
+      e.classList.add('endplay')
+    }) 
+    boardFour.forEach(e => {
+      e.classList.add('endplay')
+    }) 
+    boardFive.forEach(e => {
+      e.classList.add('endplay')
+    }) 
+    boardSix.forEach(e => {
+      e.classList.add('endplay')
+    }) 
+    boardEight.forEach(e => {
+      e.classList.add('endplay')
+    }) 
+    boardNine.forEach(e => {
+      e.classList.add('endplay')
+    }) 
+  } 
+}
+
+function eightMove(cellNumber) {
+  if (lastMove[7].includes(cellNumber)) {
+    boardOne.forEach(e => {
+      e.classList.add('endplay')
+    }) 
+    boardTwo.forEach(e => {
+      e.classList.add('endplay')
+    }) 
+    boardThree.forEach(e => {
+      e.classList.add('endplay')
+    }) 
+    boardFour.forEach(e => {
+      e.classList.add('endplay')
+    }) 
+    boardFive.forEach(e => {
+      e.classList.add('endplay')
+    }) 
+    boardSix.forEach(e => {
+      e.classList.add('endplay')
+    }) 
+    boardSeven.forEach(e => {
+      e.classList.add('endplay')
+    }) 
+    boardNine.forEach(e => {
+      e.classList.add('endplay')
+    }) 
+  } 
+}
+
+function nineMove(cellNumber) {
+  if (lastMove[8].includes(cellNumber)) {
+    boardOne.forEach(e => {
+      e.classList.add('endplay')
+    }) 
+    boardTwo.forEach(e => {
+      e.classList.add('endplay')
+    }) 
+    boardThree.forEach(e => {
+      e.classList.add('endplay')
+    }) 
+    boardFour.forEach(e => {
+      e.classList.add('endplay')
+    }) 
+    boardFive.forEach(e => {
+      e.classList.add('endplay')
+    }) 
+    boardSix.forEach(e => {
+      e.classList.add('endplay')
+    }) 
+    boardSeven.forEach(e => {
+      e.classList.add('endplay')
+    }) 
+    boardEight.forEach(e => {
+      e.classList.add('endplay')
+    }) 
+  } 
+}
+
+//<-----PLAYER TURN ASSIGNMENT AND WIN LOGIC ------>//
 
 //Add event listener to all cells and make it clickable
 gameCells.forEach((cell) => {
   cell.addEventListener('click', choices)
-  if (lastMove[1].includes(playerOChoices)) {
-    cell.classList.remove('one')
-    console.log(cell)
-  }
+
 })
 
 function choices(event) {
@@ -176,7 +452,7 @@ function choices(event) {
   const cellStyle = event.target
   //console.log(cellStyle)
   cellStyle.classList.add(playerCounter)
-  //console.log(cell)
+  console.log(cell)
   //add the class of current cell
   playerTurn = !playerTurn
   //switch da current player using playerTurn Boolean
@@ -188,51 +464,132 @@ function choices(event) {
     playerOChoices.push(cellNumber)
     //push the cell number to the player 1 + player 2 saved choices array 
   }
+  cleanUp() 
   checkBoardZero()
   checkBoardOne()
   checkBoardTwo()
   checkBoardThree()
   checkBoardFour()
   checkBoardFive()
-  checkBoardSix() 
-  checkBoardSeven() 
+  checkBoardSix()
+  checkBoardSeven()
   checkBoardEight()
+  oneMove(cellNumber)
+  twoMove(cellNumber)
+  threeMove(cellNumber)
+  threeMove(cellNumber)
+  fourMove(cellNumber)
+  fiveMove(cellNumber)
+  sixMove(cellNumber)
+  sevenMove(cellNumber)
+  eightMove(cellNumber)
+  nineMove(cellNumber)
+
 }
+
+
+
+//<-----CHECKING BOARD FOR A WIN ------>//
 
 function checkBoardZero() {
   if (boardZeroArray[0].every(r => playerOChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player O Wins Board One!'
+    scoreboard.innerHTML = 'Hot Sauce Wins Board 1!'
+    boardOne.forEach(e => {
+      e.classList.add('hotsauce')
+    })
+
   } else if (boardZeroArray[0].every(r => playerXChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player X Wins Board One!'
+    scoreboard.innerHTML = 'Mayo Wins Board 1!'
+    boardOne.forEach(e => {
+      e.classList.add('mayo')
+    })
+
   } else if (boardZeroArray[1].every(r => playerOChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player O Wins Board One!'
+    scoreboard.innerHTML = 'Hot Sauce Wins Board 1!'
+    boardOne.forEach(e => {
+      e.classList.add('hotsauce')
+    })
+
   } else if (boardZeroArray[1].every(r => playerXChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player X Wins Board One!'
+    scoreboard.innerHTML = 'Mayo Wins Board 1!'
+    boardOne.forEach(e => {
+      e.classList.add('mayo')
+    })
+
   } else if (boardZeroArray[2].every(r => playerOChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player O Wins Board One!'
+    scoreboard.innerHTML = 'Hot Sauce Wins Board 1!'
+    boardOne.forEach(e => {
+      e.classList.add('hotsauce')
+    })
+
   } else if (boardZeroArray[2].every(r => playerXChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player X Wins Board One!'
+    scoreboard.innerHTML = 'Mayo Wins Board 1!'
+    boardOne.forEach(e => {
+      e.classList.add('mayo')
+    })
+
   } else if (boardZeroArray[3].every(r => playerOChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player O Wins Board One!'
+    scoreboard.innerHTML = 'Hot Sauce Wins Board 1!'
+    boardOne.forEach(e => {
+      e.classList.add('hotsauce')
+    })
+
   } else if (boardZeroArray[3].every(r => playerXChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player X Wins Board One!'
+    scoreboard.innerHTML = 'Mayo Wins Board 1!'
+    boardOne.forEach(e => {
+      e.classList.add('mayo')
+    })
+
   } else if (boardZeroArray[4].every(r => playerOChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player O Wins Board One!'
+    scoreboard.innerHTML = 'Hot Sauce Wins Board 1!'
+    boardOne.forEach(e => {
+      e.classList.add('hotsauce')
+    })
+
   } else if (boardZeroArray[4].every(r => playerXChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player X Wins Board One!'
+    scoreboard.innerHTML = 'Mayo Wins Board 1!'
+    boardOne.forEach(e => {
+      e.classList.add('mayo')
+    })
+
   } else if (boardZeroArray[5].every(r => playerOChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player O Wins Board One!'
+    scoreboard.innerHTML = 'Hot Sauce Wins Board 1!'
+    boardOne.forEach(e => {
+      e.classList.add('hotsauce')
+    })
+
   } else if (boardZeroArray[5].every(r => playerXChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player X Wins Board One!'
+    scoreboard.innerHTML = 'Mayo Wins Board 1!'
+    boardOne.forEach(e => {
+      e.classList.add('mayo')
+    })
+
   } else if (boardZeroArray[6].every(r => playerOChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player O Wins Board One!'
+    scoreboard.innerHTML = 'Hot Sauce Wins Board 1!'
+    boardOne.forEach(e => {
+      e.classList.add('hotsauce')
+    })
+
   } else if (boardZeroArray[6].every(r => playerXChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player X Wins Board One!'
+    scoreboard.innerHTML = 'Mayo Wins Board 1!'
+    boardOne.forEach(e => {
+      e.classList.add('mayo')
+    })
+
+
   } else if (boardZeroArray[7].every(r => playerOChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player O Wins Board One!'
+    scoreboard.innerHTML = 'Hot Sauce Wins Board 1!'
+    boardOne.forEach(e => {
+      e.classList.add('hotsauce')
+    })
+
   } else if (boardZeroArray[7].every(r => playerXChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player X Wins Board One!'
-  } 
+    scoreboard.innerHTML = 'Mayo Wins Board 1!'
+    boardOne.forEach(e => {
+      e.classList.add('mayo')
+    })
+
+  }
 }
 
 function checkBoardOne() {
@@ -268,7 +625,7 @@ function checkBoardOne() {
     scoreboard.innerHTML = 'Player O Wins Board Two!'
   } else if (boardOneArray[7].every(r => playerXChoices.includes(r))) {
     scoreboard.innerHTML = 'Player X Wins Board Two!'
-  } 
+  }
 }
 
 function checkBoardTwo() {
@@ -304,7 +661,7 @@ function checkBoardTwo() {
     scoreboard.innerHTML = 'Player O Wins Board Three!'
   } else if (boardTwoArray[7].every(r => playerXChoices.includes(r))) {
     scoreboard.innerHTML = 'Player X Wins Board Three!'
-  } 
+  }
 }
 
 function checkBoardThree() {
@@ -340,7 +697,7 @@ function checkBoardThree() {
     scoreboard.innerHTML = 'Player O Wins Board Four!'
   } else if (boardThreeArray[7].every(r => playerXChoices.includes(r))) {
     scoreboard.innerHTML = 'Player X Wins Board Four!'
-  } 
+  }
 }
 
 function checkBoardFour() {
@@ -376,7 +733,7 @@ function checkBoardFour() {
     scoreboard.innerHTML = 'Player O Wins Board Five!'
   } else if (boardFourArray[7].every(r => playerXChoices.includes(r))) {
     scoreboard.innerHTML = 'Player X Wins Board Five!'
-  } 
+  }
 }
 
 function checkBoardFive() {
@@ -412,7 +769,7 @@ function checkBoardFive() {
     scoreboard.innerHTML = 'Player O Wins Board Six!'
   } else if (boardFiveArray[7].every(r => playerXChoices.includes(r))) {
     scoreboard.innerHTML = 'Player X Wins Board Six!'
-  } 
+  }
 }
 
 function checkBoardSix() {
@@ -448,7 +805,7 @@ function checkBoardSix() {
     scoreboard.innerHTML = 'Player O Wins Board Seven!'
   } else if (boardSixArray[7].every(r => playerXChoices.includes(r))) {
     scoreboard.innerHTML = 'Player X Wins Board Seven!'
-  } 
+  }
 }
 
 function checkBoardSeven() {
@@ -484,7 +841,7 @@ function checkBoardSeven() {
     scoreboard.innerHTML = 'Player O Wins Board Eight!'
   } else if (boardSevenArray[7].every(r => playerXChoices.includes(r))) {
     scoreboard.innerHTML = 'Player X Wins Board Eight!'
-  } 
+  }
 }
 
 function checkBoardEight() {
@@ -520,5 +877,5 @@ function checkBoardEight() {
     scoreboard.innerHTML = 'Player O Wins Board Nine!'
   } else if (boardEightArray[7].every(r => playerXChoices.includes(r))) {
     scoreboard.innerHTML = 'Player X Wins Board Nine!'
-  } 
+  }
 }
