@@ -42,8 +42,7 @@ h2 {
   font-size: 30px;
   color: #ffffff;
   font-weight: 500;
-  margin: 10px;
-  
+  margin: 10px;  
 }
 
 h3 {
@@ -170,6 +169,7 @@ aside {
   margin: 10px;
   color: #000000;
   background-color: #ffffff;
+  font-size: 12px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   flex-grow: 1;
 }
@@ -180,6 +180,7 @@ aside {
   text-align: center;
   margin: 10px;
   color: #000000;
+  font-size: 12px;
   background-color: #ffffff;
   border-width: 1px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
