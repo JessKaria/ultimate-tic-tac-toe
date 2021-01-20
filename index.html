@@ -4,12 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="main.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC" rel="stylesheet"> 
   <title>Ultimate Tic-Tac-Toe</title>
 </head>
 <body>
   <div class="pageborder">
     <header>
-      <h2>Scoreboard</h2>
+      <div>
+        <h1>CLASH OF THE CONDIMENTS</h1>
+      </div>
     </header>
     <main>
       <section>
@@ -100,25 +104,23 @@
   
       <aside>
         <div>
-  
+          <h2>Ultimate Tic-Tac-Toe</h2>
+          <h3>The Rules</h3>
+          <p>
+            Welcome to ultimate tic-tac-toe, you've got a smaller grid within each of those 9 squares: 
+            To win the game, you have to win three of the larger squares in a row, and to win a large square, 
+            you have to win three in a row in the smaller grid inside it.
+          </p>
+          <div class="scoreboardsauce">
+            <div id="player1"></div>
+          </div>
+          <div class="scoreboardmayo">
+            <div id="player2"></div>
+          </div>
         </div>
-        <div>
-  
-        </div>
-        <div>
-  
-        </div>
+
+        <button id="reset" onClick="window.location.reload();">Reload!</button>
         
-    
-        <div id="scoreboardsauce">
-        </div>
-        <button>RESET GAME</button>
-        </div>
-        <div id="scoreboardmayo">
-        </div>
-        <div id="mayogameone"></div>
-        <div id="gametwo"></div>
-        <div id="gameone"></div>
       </aside>
   
     </main>

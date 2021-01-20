@@ -8,20 +8,48 @@ body {
   flex-direction: column;
   height: 100vh;
   flex-grow: 1;
-}
+  background-image: url("https://cdn.shopify.com/s/files/1/0306/1016/1723/files/1_e07f3614-9ca3-4c80-86b9-942439f13a96.png?v=1606864470");
+  font-family: 'Bowlby One SC', cursive;
 
+
+}
 
 main {
   display: flex;
   flex-direction: row;
   justify-content: left;
   flex-grow: 1;
-  background-color: coral;
+  background-color: rgb(0, 0, 0);
+  box-shadow: 0 0 40px 0 #ffffff;
+  padding: 15px;
+}
+
+header {
+  height: 80px;
+  margin: 40px;
 }
 
 
 h1 {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 50px;
+  color: #ffffff;
+  font-weight: 500;
+  margin: 10px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 30px;
+  color: #ffffff;
+  font-weight: 500;
+  margin: 10px;
+}
+
+h3 {
+  font-size: 20px;
+  color: #ffffff;
+  font-weight: 500;
+  margin: 10px;
 }
 
 button {
@@ -31,25 +59,27 @@ button {
   color: black;
 }
 
+p {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  margin: 10px;
+}
+
 aside {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   flex-grow: 1;
+  width: 300px;
+  color: white;
 }
 
-
-.pageborder {
-  flex-grow: 1;
-}
 
 .grid {
-  box-shadow: 0 0 40px 0 #ffffff;
   border-width: 10px;
   height: 100%;
-  height: 600px;
-  width: 600px;
+  height: 400px;
+  width: 400px;
   display: flex;
   flex-wrap: wrap;
   margin: 10px;
@@ -57,55 +87,49 @@ aside {
 
 
 .one {
-
-  background-color: #DB162F;  
+  background-color: #fe0000;
 }
 
 .two {
 
-  background-color:#0075F2;  
+  background-color:#0e0e0e;
 }
 
 .three {
-  background-color:#DB162F;  
+  background-color:#fe0000; 
 }
 
 .four {
-  background-color: #0075f2;
+  background-color: #0e0e0e;
 }
 
 .five {
-  background-color:#DB162F;  
+  background-color:#fe0000; 
 }
 
 .six {
-  background-color: #0075f2;
+  background-color: #0e0e0e;
 }
 
 .seven {
-  background-color:#DB162F;  
+  background-color:#fe0000; 
 }
 
 .eight {
-  background-color: #0075f2;
+  background-color: #0e0e0e;
 }
 
 .nine {
-  background-color:#DB162F;  
-}
-
-
-.div {
-  border: 0px solid rgb(255, 255, 255);
-  font-size: 25px;
+  background-color: #fe0000;
 }
 
 
 .grid div {
   flex-grow: 1;
-  border: 0.5px solid rgb(255, 255, 255);
+  border: 0.5px solid white;
   height: 11.1%;
   width: 11.1%;
+  border-radius: 50%; 
 }
 
 .grid div.X {
@@ -120,36 +144,38 @@ aside {
 
 .endplay {
   pointer-events: none;
-  background-color: #000000;
+  background-color: #4cdf12;
 } 
 
 .mayo {
   pointer-events: none;
-  background-color: #0075F2;
+  background-image: url("/mayowin.png");
 } 
 
 .hotsauce {
   pointer-events: none;
-  background-color: #DB162F
+  background-image: url("/mayowin.png");
 } 
 
 
-#scoreboardmayo {
-  width: 200px;
-  height: 40px;
-  padding: 10px;
-  text-align: center;
-  margin: 10px;
-  background-color: #000000;
-}
 
-#scoreboardsauce {
-  width: 200px;
+.scoreboardmayo {
   height: 40px;
   padding: 10px;
   text-align: center;
   margin: 10px;
   color: #000000;
+  background-color: #ffffff;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.scoreboardsauce {
+  height: 40px;
+  padding: 10px;
+  text-align: center;
+  margin: 10px;
+  color: #000000;
+  background-color: #ffffff;
   border-width: 1px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }

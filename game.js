@@ -1,3 +1,4 @@
+//!!------WINNING ARRAYS BOARD MOVEMENT--------!!//
 const playerXChoices = []
 //console.log(playerXChoices)
 const playerOChoices = []
@@ -5,15 +6,29 @@ const playerOChoices = []
 const one = 'O'
 const two = 'X'
 let playerTurn = true
-const scoreboardmayo = document.querySelector('#scoreboardmayo')
-const scoreboardsauce = document.querySelector('#scoreboardsauce')
+const scoreboardmayo = document.querySelector('.scoreboardmayo')
+console.log(scoreboardmayo)
+const scoreboardsauce = document.querySelector('.scoreboardsauce')
+console.log(scoreboardsauce)
 const gameCells = Array.from(document.querySelectorAll('.grid div'))
-//console.log(gameCells)
+
+// !! <-----SELECTING THE CLASSES OF THE DIFFERENT BOARDS------> //
+
+const boardOne = Array.from(document.querySelectorAll('.one'))
+const boardTwo = Array.from(document.querySelectorAll('.two'))
+const boardThree = Array.from(document.querySelectorAll('.three'))
+const boardFour = Array.from(document.querySelectorAll('.four'))
+const boardFive = Array.from(document.querySelectorAll('.five'))
+const boardSix = Array.from(document.querySelectorAll('.six'))
+const boardSeven = Array.from(document.querySelectorAll('.seven'))
+const boardEight = Array.from(document.querySelectorAll('.eight'))
+const boardNine = Array.from(document.querySelectorAll('.nine'))
+
 
 //const button = document.querySelector('button')
 //console.log('hello)
 
-//------WINNING ARRAYS BOARD MOVEMENT--------//
+//!!------WINNING ARRAYS BOARD MOVEMENT--------!!//
 
 const boardZeroArray = [
   [0, 1, 2],
@@ -131,17 +146,11 @@ const lastMove = [
   [20, 23, 26, 47, 50, 53, 74, 77, 80]
 ]
 
-// !! <-----SELECTING THE CLASSES OF THE DIFFERENT BOARDS------> //
 
-const boardOne = Array.from(document.querySelectorAll('.one'))
-const boardTwo = Array.from(document.querySelectorAll('.two'))
-const boardThree = Array.from(document.querySelectorAll('.three'))
-const boardFour = Array.from(document.querySelectorAll('.four'))
-const boardFive = Array.from(document.querySelectorAll('.five'))
-const boardSix = Array.from(document.querySelectorAll('.six'))
-const boardSeven = Array.from(document.querySelectorAll('.seven'))
-const boardEight = Array.from(document.querySelectorAll('.eight'))
-const boardNine = Array.from(document.querySelectorAll('.nine'))
+//!!<-----CLEAN UP THE BOARD OF CLASSES TO STOP PEOPLE CLICKING TWICE-----> //
+
+//const reset = document.querySelector('#reset')
+
 
 
 //!!<-----CLEAN UP THE BOARD OF CLASSES TO STOP PEOPLE CLICKING TWICE-----> //
@@ -568,12 +577,12 @@ function checkBoardZero() {
       e.classList.add('mayo')
     })
 
-
   } else if (boardZeroArray[6].every(r => playerOChoices.includes(r))) {
-    scoreboardsauce.innerHTML = 'Hot Sauce Wins Board 1!'
+    scoreboardmayo.innerHTML = 'Hot sauce Wins Board 1!'
     boardOne.forEach(e => {
       e.classList.add('hotsauce')
     })
+
 
   } else if (boardZeroArray[6].every(r => playerXChoices.includes(r))) {
     scoreboardmayo.innerHTML = 'Mayo Wins Board 1!'
@@ -595,6 +604,9 @@ function checkBoardZero() {
     })
   }
 }
+
+
+
 
 function checkBoardOne() {
   if (boardOneArray[0].every(r => playerOChoices.includes(r))) {
