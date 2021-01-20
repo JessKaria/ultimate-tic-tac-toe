@@ -29,8 +29,7 @@ h1 {
 button {
   background-color: white;
   width: 200px;
-  height: 60px;
-  padding: 15px;
+  height: 40px;
   margin: 10px;
   color: black;
 }
@@ -45,7 +44,7 @@ aside {
 
 
 .grid {
-  box-shadow: 0 0 20px 0 #fe5000;
+  box-shadow: 0 0 20px 0 #ffffff;
   height: 100%;
   height: 600px;
   width: 600px;
@@ -62,7 +61,7 @@ aside {
 
 
 .grid div {
-  border: 5px solid lightgrey;
+  border: 1px solid lightgrey;
   flex-grow: 1;
   height: 11.1%;
   width: 11.1%;
@@ -93,22 +92,33 @@ aside {
   background-color: #DB162F
 } 
 
-.hotsauce {
+.saucewinicon {
   background-image: url("/test.png");
 } 
 
 
 
-#scoreboard {
+#scoreboardmayo {
   width: 200px;
-  height: 60px;
+  height: 40px;
   padding: 10px;
   text-align: center;
   margin: 10px;
   background-color: white;
-  color: #fe5000;
+  color: #000000;
   border-width: 1px;
-  border-color: #fe5000;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#scoreboardsauce {
+  width: 200px;
+  height: 40px;
+  padding: 10px;
+  text-align: center;
+  margin: 10px;
+  background-color: white;
+  color: #000000;
+  border-width: 1px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 

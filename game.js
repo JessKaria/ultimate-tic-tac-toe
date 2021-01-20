@@ -5,7 +5,8 @@ const playerOChoices = []
 const one = 'O'
 const two = 'X'
 let playerTurn = true
-const scoreboard = document.querySelector('#scoreboard')
+const scoreboardmayo = document.querySelector('#scoreboardmayo')
+const scoreboardsauce = document.querySelector('#scoreboardsauce')
 let player1BoardsWon = 0
 //console.log(player1BoardsWon)
 let player2BoardsWon = 0
@@ -118,7 +119,9 @@ const boardEightArray = [
   [62, 70, 78]
 ]
 
-//------DICTATATES THE NEXT MOVE MUST BE MADE IN--------//
+// !!------DICTATATES THE NEXT MOVE MUST BE MADE IN--------//
+
+// !! NEED TO USE THE BELOW ARRAYS AS STOP LISTS FOR WINNING THE BELOW BOARDS
 
 const lastMove = [
   [0, 3, 6, 27, 30, 33, 54, 57, 60],
@@ -132,7 +135,7 @@ const lastMove = [
   [20, 23, 26, 47, 50, 53, 74, 77, 80]
 ]
 
-//<-----SELECTING THE CLASSES OF THE DIFFERENT BOARDS------>//
+// !! <-----SELECTING THE CLASSES OF THE DIFFERENT BOARDS------> //
 
 const boardOne = Array.from(document.querySelectorAll('.one'))
 const boardTwo = Array.from(document.querySelectorAll('.two'))
@@ -143,6 +146,8 @@ const boardSix = Array.from(document.querySelectorAll('.six'))
 const boardSeven = Array.from(document.querySelectorAll('.seven'))
 const boardEight = Array.from(document.querySelectorAll('.eight'))
 const boardNine = Array.from(document.querySelectorAll('.nine'))
+
+//!!<-----CLEAN UP THE BOARD OF CLASSES TO STOP PEOPLE CLICKING TWICE-----> //
 
 function cleanUp() {
   boardOne.forEach(e => {
@@ -174,6 +179,7 @@ function cleanUp() {
   })
 }
 
+//!!<-----FUNCTIONS TO CONTROL BOARD MOVEMENT-----> //
 
 function oneMove(cellNumber) {
   if (lastMove[0].includes(cellNumber)) {
@@ -436,7 +442,7 @@ function nineMove(cellNumber) {
   } 
 }
 
-//<-----PLAYER TURN ASSIGNMENT AND WIN LOGIC ------>//
+//!!<-----PLAYER ASSIGNMENT EVENT-----> //
 
 //Add event listener to all cells and make it clickable
 gameCells.forEach((cell) => {
@@ -488,394 +494,895 @@ function choices(event) {
 }
 
 
-
-//<-----CHECKING BOARD FOR A WIN ------>//
+//!!<-----CHECKING BOARD FOR A WIN ------>!!//
 
 function checkBoardZero() {
   if (boardZeroArray[0].every(r => playerOChoices.includes(r))) {
-    scoreboard.innerHTML = 'Hot Sauce Wins Board 1!'
+    scoreboardsauce.innerHTML = 'Hot Sauce Wins Board 1!'
     boardOne.forEach(e => {
       e.classList.add('hotsauce')
     })
 
   } else if (boardZeroArray[0].every(r => playerXChoices.includes(r))) {
-    scoreboard.innerHTML = 'Mayo Wins Board 1!'
+    scoreboardmayo.innerHTML = 'Mayo Wins Board 1!'
     boardOne.forEach(e => {
       e.classList.add('mayo')
     })
 
   } else if (boardZeroArray[1].every(r => playerOChoices.includes(r))) {
-    scoreboard.innerHTML = 'Hot Sauce Wins Board 1!'
+    scoreboardsauce.innerHTML = 'Hot Sauce Wins Board 1!'
     boardOne.forEach(e => {
       e.classList.add('hotsauce')
     })
 
   } else if (boardZeroArray[1].every(r => playerXChoices.includes(r))) {
-    scoreboard.innerHTML = 'Mayo Wins Board 1!'
+    scoreboardmayo.innerHTML = 'Mayo Wins Board 1!'
     boardOne.forEach(e => {
       e.classList.add('mayo')
     })
 
   } else if (boardZeroArray[2].every(r => playerOChoices.includes(r))) {
-    scoreboard.innerHTML = 'Hot Sauce Wins Board 1!'
+    scoreboardsauce.innerHTML = 'Hot Sauce Wins Board 1!'
     boardOne.forEach(e => {
       e.classList.add('hotsauce')
     })
 
   } else if (boardZeroArray[2].every(r => playerXChoices.includes(r))) {
-    scoreboard.innerHTML = 'Mayo Wins Board 1!'
+    scoreboardmayo.innerHTML = 'Mayo Wins Board 1!'
     boardOne.forEach(e => {
       e.classList.add('mayo')
     })
 
   } else if (boardZeroArray[3].every(r => playerOChoices.includes(r))) {
-    scoreboard.innerHTML = 'Hot Sauce Wins Board 1!'
+    scoreboardsauce.innerHTML = 'Hot Sauce Wins Board 1!'
     boardOne.forEach(e => {
       e.classList.add('hotsauce')
     })
 
   } else if (boardZeroArray[3].every(r => playerXChoices.includes(r))) {
-    scoreboard.innerHTML = 'Mayo Wins Board 1!'
+    scoreboardmayo.innerHTML = 'Mayo Wins Board 1!'
     boardOne.forEach(e => {
       e.classList.add('mayo')
     })
 
   } else if (boardZeroArray[4].every(r => playerOChoices.includes(r))) {
-    scoreboard.innerHTML = 'Hot Sauce Wins Board 1!'
+    scoreboardsauce.innerHTML = 'Hot Sauce Wins Board 1!'
     boardOne.forEach(e => {
       e.classList.add('hotsauce')
     })
 
   } else if (boardZeroArray[4].every(r => playerXChoices.includes(r))) {
-    scoreboard.innerHTML = 'Mayo Wins Board 1!'
+    scoreboardmayo.innerHTML = 'Mayo Wins Board 1!'
     boardOne.forEach(e => {
       e.classList.add('mayo')
     })
 
   } else if (boardZeroArray[5].every(r => playerOChoices.includes(r))) {
-    scoreboard.innerHTML = 'Hot Sauce Wins Board 1!'
+    scoreboardsauce.innerHTML = 'Hot Sauce Wins Board 1!'
     boardOne.forEach(e => {
       e.classList.add('hotsauce')
     })
 
   } else if (boardZeroArray[5].every(r => playerXChoices.includes(r))) {
-    scoreboard.innerHTML = 'Mayo Wins Board 1!'
+    scoreboardmayo.innerHTML = 'Mayo Wins Board 1!'
     boardOne.forEach(e => {
       e.classList.add('mayo')
     })
 
   } else if (boardZeroArray[6].every(r => playerOChoices.includes(r))) {
-    scoreboard.innerHTML = 'Hot Sauce Wins Board 1!'
+    scoreboardsauce.innerHTML = 'Hot Sauce Wins Board 1!'
     boardOne.forEach(e => {
       e.classList.add('hotsauce')
     })
 
   } else if (boardZeroArray[6].every(r => playerXChoices.includes(r))) {
-    scoreboard.innerHTML = 'Mayo Wins Board 1!'
+    scoreboardmayo.innerHTML = 'Mayo Wins Board 1!'
     boardOne.forEach(e => {
       e.classList.add('mayo')
     })
 
-
   } else if (boardZeroArray[7].every(r => playerOChoices.includes(r))) {
-    scoreboard.innerHTML = 'Hot Sauce Wins Board 1!'
+    scoreboardsauce.innerHTML = 'Hot Sauce Wins Board 1!'
     boardOne.forEach(e => {
       e.classList.add('hotsauce')
     })
 
   } else if (boardZeroArray[7].every(r => playerXChoices.includes(r))) {
-    scoreboard.innerHTML = 'Mayo Wins Board 1!'
+    scoreboardmayo.innerHTML = 'Mayo Wins Board 1!'
     boardOne.forEach(e => {
       e.classList.add('mayo')
     })
-
   }
 }
 
 function checkBoardOne() {
   if (boardOneArray[0].every(r => playerOChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player O Wins Board Two'
+    scoreboardsauce.innerHTML = 'Hot Sauce Wins Board 2!'
+    boardTwo.forEach(e => {
+      e.classList.add('hotsauce')
+    })
+
   } else if (boardOneArray[0].every(r => playerXChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player X Wins Board Two!'
+    scoreboardmayo.innerHTML = 'Mayo Wins Board 2!'
+    boardTwo.forEach(e => {
+      e.classList.add('mayo')
+    })
+
   } else if (boardOneArray[1].every(r => playerOChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player O Wins Board Two!'
+    scoreboardsauce.innerHTML = 'Hot Sauce Wins Board 2!'
+    boardTwo.forEach(e => {
+      e.classList.add('hotsauce')
+    })
+
   } else if (boardOneArray[1].every(r => playerXChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player X Wins Board Two!'
+    scoreboardmayo.innerHTML = 'Mayo Wins Board 2!'
+    boardTwo.forEach(e => {
+      e.classList.add('mayo')
+    })
+
   } else if (boardOneArray[2].every(r => playerOChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player O Wins Board Two!'
+    scoreboardsauce.innerHTML = 'Hot Sauce Wins Board 2!'
+    boardTwo.forEach(e => {
+      e.classList.add('hotsauce')
+    })
+
   } else if (boardOneArray[2].every(r => playerXChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player X Wins Board Two!'
+    scoreboardmayo.innerHTML = 'Mayo Wins Board 2!'
+    boardTwo.forEach(e => {
+      e.classList.add('mayo')
+    })
+
   } else if (boardOneArray[3].every(r => playerOChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player O Wins Board Two!'
+    scoreboardsauce.innerHTML = 'Hot Sauce Wins Board 2!'
+    boardTwo.forEach(e => {
+      e.classList.add('hotsauce')
+    })
+
   } else if (boardOneArray[3].every(r => playerXChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player X Wins Board Two!'
+    scoreboardmayo.innerHTML = 'Mayo Wins Board 2!'
+    boardTwo.forEach(e => {
+      e.classList.add('mayo')
+    })
+
   } else if (boardOneArray[4].every(r => playerOChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player O Wins Board Two!'
+    scoreboardsauce.innerHTML = 'Hot Sauce Wins Board 2!'
+    boardTwo.forEach(e => {
+      e.classList.add('hotsauce')
+    })
+
   } else if (boardOneArray[4].every(r => playerXChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player X Wins Board Two!'
+    scoreboardmayo.innerHTML = 'Mayo Wins Board 2!'
+    boardTwo.forEach(e => {
+      e.classList.add('mayo')
+    })
+
   } else if (boardOneArray[5].every(r => playerOChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player O Wins Board Two!'
+    scoreboardsauce.innerHTML = 'Hot Sauce Wins Board 2!'
+    boardTwo.forEach(e => {
+      e.classList.add('hotsauce')
+    })
+
   } else if (boardOneArray[5].every(r => playerXChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player X Wins Board Two!'
+    scoreboardmayo.innerHTML = 'Mayo Wins Board 2!'
+    boardTwo.forEach(e => {
+      e.classList.add('mayo')
+    })
+
   } else if (boardOneArray[6].every(r => playerOChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player O Wins Board Two!'
+    scoreboardsauce.innerHTML = 'Hot Sauce Wins Board 2!'
+    boardTwo.forEach(e => {
+      e.classList.add('hotsauce')
+    })
+
   } else if (boardOneArray[6].every(r => playerXChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player X Wins Board Two!'
+    scoreboardmayo.innerHTML = 'Mayo Wins Board 2!'
+    boardTwo.forEach(e => {
+      e.classList.add('mayo')
+    })
+
   } else if (boardOneArray[7].every(r => playerOChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player O Wins Board Two!'
+    scoreboardsauce.innerHTML = 'Hot Sauce Wins Board 2!'
+    boardTwo.forEach(e => {
+      e.classList.add('hotsauce')
+    })
+
   } else if (boardOneArray[7].every(r => playerXChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player X Wins Board Two!'
+    scoreboardmayo.innerHTML = 'Mayo Wins Board 2!'
+    boardTwo.forEach(e => {
+      e.classList.add('mayo')
+    })
   }
 }
 
 function checkBoardTwo() {
   if (boardTwoArray[0].every(r => playerOChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player O Wins Board Three'
+    scoreboardsauce.innerHTML = 'Hot Sauce Wins Board 3!'
+    boardThree.forEach(e => {
+      e.classList.add('hotsauce')
+    })
+
   } else if (boardTwoArray[0].every(r => playerXChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player X Wins Board Three!'
+    scoreboardmayo.innerHTML = 'Mayo Wins Board 3!'
+    boardThree.forEach(e => {
+      e.classList.add('mayo')
+    })
+
   } else if (boardTwoArray[1].every(r => playerOChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player O Wins Board Three!'
+    scoreboardsauce.innerHTML = 'Hot Sauce Wins Board 3!'
+    boardThree.forEach(e => {
+      e.classList.add('hotsauce')
+    })
+
   } else if (boardTwoArray[1].every(r => playerXChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player X Wins Board Three!'
+    scoreboardmayo.innerHTML = 'Mayo Wins Board 3!'
+    boardThree.forEach(e => {
+      e.classList.add('mayo')
+    })
+
   } else if (boardTwoArray[2].every(r => playerOChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player O Wins Board Three!'
+    scoreboardsauce.innerHTML = 'Hot Sauce Wins Board 3!'
+    boardThree.forEach(e => {
+      e.classList.add('hotsauce')
+    })
+
   } else if (boardTwoArray[2].every(r => playerXChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player X Wins Board Three!'
+    scoreboardmayo.innerHTML = 'Mayo Wins Board 3!'
+    boardThree.forEach(e => {
+      e.classList.add('mayo')
+    })
+
   } else if (boardTwoArray[3].every(r => playerOChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player O Wins Board Three!'
+    scoreboardsauce.innerHTML = 'Hot Sauce Wins Board 3!'
+    boardThree.forEach(e => {
+      e.classList.add('hotsauce')
+    })
+
   } else if (boardTwoArray[3].every(r => playerXChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player X Wins Board Three!'
+    scoreboardmayo.innerHTML = 'Mayo Wins Board 3!'
+    boardThree.forEach(e => {
+      e.classList.add('mayo')
+    })
+
   } else if (boardTwoArray[4].every(r => playerOChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player O Wins Board Three!'
+    scoreboardsauce.innerHTML = 'Hot Sauce Wins Board 3!'
+    boardThree.forEach(e => {
+      e.classList.add('hotsauce')
+    })
+
   } else if (boardTwoArray[4].every(r => playerXChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player X Wins Board Three!'
+    scoreboardmayo.innerHTML = 'Mayo Wins Board 3!'
+    boardThree.forEach(e => {
+      e.classList.add('mayo')
+    })
+
   } else if (boardTwoArray[5].every(r => playerOChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player O Wins Board Three!'
+    scoreboardsauce.innerHTML = 'Hot Sauce Wins Board 3!'
+    boardThree.forEach(e => {
+      e.classList.add('hotsauce')
+    })
+
   } else if (boardTwoArray[5].every(r => playerXChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player X Wins Board Three!'
+    scoreboardmayo.innerHTML = 'Mayo Wins Board 3!'
+    boardThree.forEach(e => {
+      e.classList.add('mayo')
+    })
+
   } else if (boardTwoArray[6].every(r => playerOChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player O Wins Board Three!'
+    scoreboardsauce.innerHTML = 'Hot Sauce Wins Board 3!'
+    boardThree.forEach(e => {
+      e.classList.add('hotsauce')
+    })
+
   } else if (boardTwoArray[6].every(r => playerXChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player X Wins Board Three!'
+    scoreboardmayo.innerHTML = 'Mayo Wins Board 3!'
+    boardThree.forEach(e => {
+      e.classList.add('mayo')
+    })
+
   } else if (boardTwoArray[7].every(r => playerOChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player O Wins Board Three!'
+    scoreboardsauce.innerHTML = 'Hot Sauce Wins Board 3!'
+    boardThree.forEach(e => {
+      e.classList.add('hotsauce')
+    })
+
   } else if (boardTwoArray[7].every(r => playerXChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player X Wins Board Three!'
+    scoreboardmayo.innerHTML = 'Mayo Wins Board 3!'
+    boardThree.forEach(e => {
+      e.classList.add('mayo')
+    })
   }
 }
 
 function checkBoardThree() {
   if (boardThreeArray[0].every(r => playerOChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player O Wins Board Four'
+    scoreboardsauce.innerHTML = 'Hot Sauce Wins Board 4!'
+    boardFour.forEach(e => {
+      e.classList.add('hotsauce')
+    })
+
   } else if (boardThreeArray[0].every(r => playerXChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player X Wins Board Four!'
+    scoreboardmayo.innerHTML = 'Mayo Wins Board 4!'
+    boardFour.forEach(e => {
+      e.classList.add('mayo')
+    })
+
   } else if (boardThreeArray[1].every(r => playerOChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player O Wins Board Four!'
+    scoreboardsauce.innerHTML = 'Hot Sauce Wins Board 4!'
+    boardFour.forEach(e => {
+      e.classList.add('hotsauce')
+    })
+
   } else if (boardThreeArray[1].every(r => playerXChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player X Wins Board Four!'
+    scoreboardmayo.innerHTML = 'Mayo Wins Board 4!'
+    boardFour.forEach(e => {
+      e.classList.add('mayo')
+    })
+
   } else if (boardThreeArray[2].every(r => playerOChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player O Wins Board Four!'
+    scoreboardsauce.innerHTML = 'Hot Sauce Wins Board 4!'
+    boardFour.forEach(e => {
+      e.classList.add('hotsauce')
+    })
+
   } else if (boardThreeArray[2].every(r => playerXChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player X Wins Board Four!'
+    scoreboardmayo.innerHTML = 'Mayo Wins Board 4!'
+    boardFour.forEach(e => {
+      e.classList.add('mayo')
+    })
+
   } else if (boardThreeArray[3].every(r => playerOChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player O Wins Board Four!'
+    scoreboardsauce.innerHTML = 'Hot Sauce Wins Board 4!'
+    boardFour.forEach(e => {
+      e.classList.add('hotsauce')
+    })
+
   } else if (boardThreeArray[3].every(r => playerXChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player X Wins Board Four!'
+    scoreboardmayo.innerHTML = 'Mayo Wins Board 4!'
+    boardFour.forEach(e => {
+      e.classList.add('mayo')
+    })
+
   } else if (boardThreeArray[4].every(r => playerOChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player O Wins Board Four!'
+    scoreboardsauce.innerHTML = 'Hot Sauce Wins Board 4!'
+    boardFour.forEach(e => {
+      e.classList.add('hotsauce')
+    })
+
   } else if (boardThreeArray[4].every(r => playerXChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player X Wins Board Four!'
+    scoreboardmayo.innerHTML = 'Mayo Wins Board 4!'
+    boardFour.forEach(e => {
+      e.classList.add('mayo')
+    })
+
   } else if (boardThreeArray[5].every(r => playerOChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player O Wins Board Four!'
+    scoreboardsauce.innerHTML = 'Hot Sauce Wins Board 4!'
+    boardFour.forEach(e => {
+      e.classList.add('hotsauce')
+    })
+
   } else if (boardThreeArray[5].every(r => playerXChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player X Wins Board Four!'
+    scoreboardmayo.innerHTML = 'Mayo Wins Board 4!'
+    boardFour.forEach(e => {
+      e.classList.add('mayo')
+    })
+
   } else if (boardThreeArray[6].every(r => playerOChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player O Wins Board Four!'
+    scoreboardsauce.innerHTML = 'Hot Sauce Wins Board 4!'
+    boardFour.forEach(e => {
+      e.classList.add('hotsauce')
+    })
+
   } else if (boardThreeArray[6].every(r => playerXChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player X Wins Board Four!'
+    scoreboardmayo.innerHTML = 'Mayo Wins Board 4!'
+    boardFour.forEach(e => {
+      e.classList.add('mayo')
+    })
+
   } else if (boardThreeArray[7].every(r => playerOChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player O Wins Board Four!'
+    scoreboardsauce.innerHTML = 'Hot Sauce Wins Board 4!'
+    boardFour.forEach(e => {
+      e.classList.add('hotsauce')
+    })
+
   } else if (boardThreeArray[7].every(r => playerXChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player X Wins Board Four!'
+    scoreboardmayo.innerHTML = 'Mayo Wins Board 4!'
+    boardFour.forEach(e => {
+      e.classList.add('mayo')
+    })
   }
 }
 
 function checkBoardFour() {
   if (boardFourArray[0].every(r => playerOChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player O Wins Board Five'
+    scoreboardsauce.innerHTML = 'Hot Sauce Wins Board 5!'
+    boardFive.forEach(e => {
+      e.classList.add('hotsauce')
+    })
+
   } else if (boardFourArray[0].every(r => playerXChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player X Wins Board Five!'
+    scoreboardmayo.innerHTML = 'Mayo Wins Board 5!'
+    boardFive.forEach(e => {
+      e.classList.add('mayo')
+    })
+
   } else if (boardFourArray[1].every(r => playerOChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player O Wins Board Five!'
+    scoreboardsauce.innerHTML = 'Hot Sauce Wins Board 5!'
+    boardFive.forEach(e => {
+      e.classList.add('hotsauce')
+    })
+
   } else if (boardFourArray[1].every(r => playerXChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player X Wins Board Five!'
+    scoreboardmayo.innerHTML = 'Mayo Wins Board 5!'
+    boardFive.forEach(e => {
+      e.classList.add('mayo')
+    })
+
   } else if (boardFourArray[2].every(r => playerOChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player O Wins Board Five!'
+    scoreboardsauce.innerHTML = 'Hot Sauce Wins Board 5!'
+    boardFive.forEach(e => {
+      e.classList.add('hotsauce')
+    })
+
   } else if (boardFourArray[2].every(r => playerXChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player X Wins Board Five!'
+    scoreboardmayo.innerHTML = 'Mayo Wins Board 5!'
+    boardFive.forEach(e => {
+      e.classList.add('mayo')
+    })
+
   } else if (boardFourArray[3].every(r => playerOChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player O Wins Board Five!'
+    scoreboardsauce.innerHTML = 'Hot Sauce Wins Board 5!'
+    boardFive.forEach(e => {
+      e.classList.add('hotsauce')
+    })
+
   } else if (boardFourArray[3].every(r => playerXChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player X Wins Board Five!'
+    scoreboardmayo.innerHTML = 'Mayo Wins Board 5!'
+    boardFive.forEach(e => {
+      e.classList.add('mayo')
+    })
+
   } else if (boardFourArray[4].every(r => playerOChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player O Wins Board Five!'
+    scoreboardsauce.innerHTML = 'Hot Sauce Wins Board 5!'
+    boardFive.forEach(e => {
+      e.classList.add('hotsauce')
+    })
+
   } else if (boardFourArray[4].every(r => playerXChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player X Wins Board Five!'
+    scoreboardmayo.innerHTML = 'Mayo Wins Board 5!'
+    boardFive.forEach(e => {
+      e.classList.add('mayo')
+    })
+
   } else if (boardFourArray[5].every(r => playerOChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player O Wins Board Five!'
+    scoreboardsauce.innerHTML = 'Hot Sauce Wins Board 5!'
+    boardFive.forEach(e => {
+      e.classList.add('hotsauce')
+    })
+
   } else if (boardFourArray[5].every(r => playerXChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player X Wins Board Five!'
+    scoreboardmayo.innerHTML = 'Mayo Wins Board 5!'
+    boardFive.forEach(e => {
+      e.classList.add('mayo')
+    })
+
   } else if (boardFourArray[6].every(r => playerOChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player O Wins Board Five!'
+    scoreboardsauce.innerHTML = 'Hot Sauce Wins Board 5!'
+    boardFive.forEach(e => {
+      e.classList.add('hotsauce')
+    })
+
   } else if (boardFourArray[6].every(r => playerXChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player X Wins Board Five!'
+    scoreboardmayo.innerHTML = 'Mayo Wins Board 5!'
+    boardFive.forEach(e => {
+      e.classList.add('mayo')
+    })
+    
   } else if (boardFourArray[7].every(r => playerOChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player O Wins Board Five!'
+    scoreboardsauce.innerHTML = 'Hot Sauce Wins Board 5!'
+    boardFive.forEach(e => {
+      e.classList.add('hotsauce')
+    })
+
   } else if (boardFourArray[7].every(r => playerXChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player X Wins Board Five!'
+    scoreboardmayo.innerHTML = 'Mayo Wins Board 5!'
+    boardFive.forEach(e => {
+      e.classList.add('mayo')
+    })
   }
 }
 
 function checkBoardFive() {
   if (boardFiveArray[0].every(r => playerOChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player O Wins Board Six!'
+    scoreboardsauce.innerHTML = 'Hot Sauce Wins Board 6!'
+    boardSix.forEach(e => {
+      e.classList.add('hotsauce')
+    })
+
   } else if (boardFiveArray[0].every(r => playerXChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player X Wins Board Six!'
+    scoreboardmayo.innerHTML = 'Mayo Wins Board 6!'
+    boardSix.forEach(e => {
+      e.classList.add('mayo')
+    })
+
   } else if (boardFiveArray[1].every(r => playerOChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player O Wins Board Six!'
+    scoreboardsauce.innerHTML = 'Hot Sauce Wins Board 6!'
+    boardSix.forEach(e => {
+      e.classList.add('hotsauce')
+    })
+
   } else if (boardFiveArray[1].every(r => playerXChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player X Wins Board Six!'
+    scoreboardmayo.innerHTML = 'Mayo Wins Board 6!'
+    boardSix.forEach(e => {
+      e.classList.add('mayo')
+    })
+
   } else if (boardFiveArray[2].every(r => playerOChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player O Wins Board Six!'
+    scoreboardsauce.innerHTML = 'Hot Sauce Wins Board 6!'
+    boardSix.forEach(e => {
+      e.classList.add('hotsauce')
+    })
+
   } else if (boardFiveArray[2].every(r => playerXChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player X Wins Board Six!'
+    scoreboardmayo.innerHTML = 'Mayo Wins Board 6!'
+    boardSix.forEach(e => {
+      e.classList.add('mayo')
+    })
+
   } else if (boardFiveArray[3].every(r => playerOChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player O Wins Board Six!'
+    scoreboardsauce.innerHTML = 'Hot Sauce Wins Board 6!'
+    boardSix.forEach(e => {
+      e.classList.add('hotsauce')
+    })
+
   } else if (boardFiveArray[3].every(r => playerXChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player X Wins Board Six!'
+    scoreboardmayo.innerHTML = 'Mayo Wins Board 6!'
+    boardSix.forEach(e => {
+      e.classList.add('mayo')
+    })
+
   } else if (boardFiveArray[4].every(r => playerOChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player O Wins Board Six!'
+    scoreboardsauce.innerHTML = 'Hot Sauce Wins Board 6!'
+    boardSix.forEach(e => {
+      e.classList.add('hotsauce')
+    })
+
   } else if (boardFiveArray[4].every(r => playerXChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player X Wins Board Six!'
+    scoreboardmayo.innerHTML = 'Mayo Wins Board 6!'
+    boardSix.forEach(e => {
+      e.classList.add('mayo')
+    })
+
   } else if (boardFiveArray[5].every(r => playerOChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player O Wins Board Six!'
+    scoreboardsauce.innerHTML = 'Hot Sauce Wins Board 6!'
+    boardSix.forEach(e => {
+      e.classList.add('hotsauce')
+    })
+
   } else if (boardFiveArray[5].every(r => playerXChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player X Wins Board Six!'
+    scoreboardmayo.innerHTML = 'Mayo Wins Board 6!'
+    boardSix.forEach(e => {
+      e.classList.add('mayo')
+    })
+
   } else if (boardFiveArray[6].every(r => playerOChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player O Wins Board Six!'
+    scoreboardsauce.innerHTML = 'Hot Sauce Wins Board 6!'
+    boardSix.forEach(e => {
+      e.classList.add('hotsauce')
+    })
+
   } else if (boardFiveArray[6].every(r => playerXChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player X Wins Board Six!'
+    scoreboardmayo.innerHTML = 'Mayo Wins Board 6!'
+    boardSix.forEach(e => {
+      e.classList.add('mayo')
+    })
+
   } else if (boardFiveArray[7].every(r => playerOChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player O Wins Board Six!'
+    scoreboardsauce.innerHTML = 'Hot Sauce Wins Board 6!'
+    boardSix.forEach(e => {
+      e.classList.add('hotsauce')
+    })
+
   } else if (boardFiveArray[7].every(r => playerXChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player X Wins Board Six!'
+    scoreboardmayo.innerHTML = 'Mayo Wins Board 6!'
+    boardSix.forEach(e => {
+      e.classList.add('mayo')
+    })
   }
 }
 
 function checkBoardSix() {
   if (boardSixArray[0].every(r => playerOChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player O Wins Board Seven!'
+    scoreboardsauce.innerHTML = 'Hot Sauce Wins Board 7!'
+    boardSeven.forEach(e => {
+      e.classList.add('hotsauce')
+    })
+
   } else if (boardSixArray[0].every(r => playerXChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player X Wins Board Seven!'
+    scoreboardmayo.innerHTML = 'Mayo Wins Board 7!'
+    boardSeven.forEach(e => {
+      e.classList.add('mayo')
+    })
+
   } else if (boardSixArray[1].every(r => playerOChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player O Wins Board Seven!'
+    scoreboardsauce.innerHTML = 'Hot Sauce Wins Board 7!'
+    boardSeven.forEach(e => {
+      e.classList.add('hotsauce')
+    })
+
   } else if (boardSixArray[1].every(r => playerXChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player X Wins Board Seven!'
+    scoreboardmayo.innerHTML = 'Mayo Wins Board 7!'
+    boardSeven.forEach(e => {
+      e.classList.add('mayo')
+    })
+
   } else if (boardSixArray[2].every(r => playerOChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player O Wins Board Seven!'
+    scoreboardsauce.innerHTML = 'Hot Sauce Wins Board 7!'
+    boardSeven.forEach(e => {
+      e.classList.add('hotsauce')
+    })
+
   } else if (boardSixArray[2].every(r => playerXChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player X Wins Board Seven!'
+    scoreboardmayo.innerHTML = 'Mayo Wins Board 7!'
+    boardSeven.forEach(e => {
+      e.classList.add('mayo')
+    })
+
   } else if (boardSixArray[3].every(r => playerOChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player O Wins Board Seven!'
+    scoreboardsauce.innerHTML = 'Hot Sauce Wins Board 7!'
+    boardSeven.forEach(e => {
+      e.classList.add('hotsauce')
+    })
+
   } else if (boardSixArray[3].every(r => playerXChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player X Wins Board Seven!'
+    scoreboardmayo.innerHTML = 'Mayo Wins Board 7!'
+    boardSeven.forEach(e => {
+      e.classList.add('mayo')
+    })
+
   } else if (boardSixArray[4].every(r => playerOChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player O Wins Board Seven!'
+    scoreboardsauce.innerHTML = 'Hot Sauce Wins Board 7!'
+    boardSeven.forEach(e => {
+      e.classList.add('hotsauce')
+    })
+    
   } else if (boardSixArray[4].every(r => playerXChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player X Wins Board Seven!'
+    scoreboardmayo.innerHTML = 'Mayo Wins Board 7!'
+    boardSeven.forEach(e => {
+      e.classList.add('mayo')
+    })
+
   } else if (boardSixArray[5].every(r => playerOChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player O Wins Board Seven!'
+    scoreboardsauce.innerHTML = 'Hot Sauce Wins Board 7!'
+    boardSeven.forEach(e => {
+      e.classList.add('hotsauce')
+    })
+
   } else if (boardSixArray[5].every(r => playerXChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player X Wins Board Seven!'
+    scoreboardmayo.innerHTML = 'Mayo Wins Board 7!'
+    boardSeven.forEach(e => {
+      e.classList.add('mayo')
+    })
+
   } else if (boardSixArray[6].every(r => playerOChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player O Wins Board Seven!'
+    scoreboardsauce.innerHTML = 'Hot Sauce Wins Board 7!'
+    boardSeven.forEach(e => {
+      e.classList.add('hotsauce')
+    })
+
   } else if (boardSixArray[6].every(r => playerXChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player X Wins Board Seven!'
+    scoreboardmayo.innerHTML = 'Mayo Wins Board 7!'
+    boardSeven.forEach(e => {
+      e.classList.add('mayo')
+    })
+
   } else if (boardSixArray[7].every(r => playerOChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player O Wins Board Seven!'
+    scoreboardsauce.innerHTML = 'Hot Sauce Wins Board 7!'
+    boardSeven.forEach(e => {
+      e.classList.add('hotsauce')
+    })
+    
   } else if (boardSixArray[7].every(r => playerXChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player X Wins Board Seven!'
+    scoreboardmayo.innerHTML = 'Mayo Wins Board 7!'
+    boardSeven.forEach(e => {
+      e.classList.add('mayo')
+    })
   }
 }
 
 function checkBoardSeven() {
   if (boardSevenArray[0].every(r => playerOChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player O Wins Board Eight!'
+    scoreboardsauce.innerHTML = 'Hot Sauce Wins Board 8!'
+    boardEight.forEach(e => {
+      e.classList.add('hotsauce')
+    })
+
   } else if (boardSevenArray[0].every(r => playerXChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player X Wins Board Eight!'
+    scoreboardmayo.innerHTML = 'Mayo Wins Board 8!'
+    boardEight.forEach(e => {
+      e.classList.add('mayo')
+    })
+
   } else if (boardSevenArray[1].every(r => playerOChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player O Wins Board Eight!'
+    scoreboardsauce.innerHTML = 'Hot Sauce Wins Board 8!'
+    boardEight.forEach(e => {
+      e.classList.add('hotsauce')
+    })
+
   } else if (boardSevenArray[1].every(r => playerXChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player X Wins Board Eight!'
+    scoreboardmayo.innerHTML = 'Mayo Wins Board 8!'
+    boardEight.forEach(e => {
+      e.classList.add('mayo')
+    })
+
   } else if (boardSevenArray[2].every(r => playerOChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player O Wins Board Eight!'
+    scoreboardsauce.innerHTML = 'Hot Sauce Wins Board 8!'
+    boardEight.forEach(e => {
+      e.classList.add('hotsauce')
+    })
+
   } else if (boardSevenArray[2].every(r => playerXChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player X Wins Board Eight!'
+    scoreboardmayo.innerHTML = 'Mayo Wins Board 8!'
+    boardEight.forEach(e => {
+      e.classList.add('mayo')
+    })
+
   } else if (boardSevenArray[3].every(r => playerOChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player O Wins Board Eight!'
+    scoreboardsauce.innerHTML = 'Hot Sauce Wins Board 8!'
+    boardEight.forEach(e => {
+      e.classList.add('hotsauce')
+    })
+
   } else if (boardSevenArray[3].every(r => playerXChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player X Wins Board Eight!'
+    scoreboardmayo.innerHTML = 'Mayo Wins Board 8!'
+    boardEight.forEach(e => {
+      e.classList.add('mayo')
+    })
+
   } else if (boardSevenArray[4].every(r => playerOChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player O Wins Board Eight!'
+    scoreboardsauce.innerHTML = 'Hot Sauce Wins Board 8!'
+    boardEight.forEach(e => {
+      e.classList.add('hotsauce')
+    })
+
   } else if (boardSevenArray[4].every(r => playerXChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player X Wins Board Eight!'
+    scoreboardmayo.innerHTML = 'Mayo Wins Board 8!'
+    boardEight.forEach(e => {
+      e.classList.add('mayo')
+    })
+
   } else if (boardSevenArray[5].every(r => playerOChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player O Wins Board Eight!'
+    scoreboardsauce.innerHTML = 'Hot Sauce Wins Board 8!'
+    boardEight.forEach(e => {
+      e.classList.add('hotsauce')
+    })
+
   } else if (boardSevenArray[5].every(r => playerXChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player X Wins Board Eight!'
+    scoreboardmayo.innerHTML = 'Mayo Wins Board 8!'
+    boardEight.forEach(e => {
+      e.classList.add('mayo')
+    })
+
   } else if (boardSevenArray[6].every(r => playerOChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player O Wins Board Eight!'
+    scoreboardsauce.innerHTML = 'Hot Sauce Wins Board 8!'
+    boardEight.forEach(e => {
+      e.classList.add('hotsauce')
+    })
+
   } else if (boardSevenArray[6].every(r => playerXChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player X Wins Board Eight!'
+    scoreboardmayo.innerHTML = 'Mayo Wins Board 8!'
+    boardEight.forEach(e => {
+      e.classList.add('mayo')
+    })
+
   } else if (boardSevenArray[7].every(r => playerOChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player O Wins Board Eight!'
+    scoreboardsauce.innerHTML = 'Hot Sauce Wins Board 8!'
+    boardEight.forEach(e => {
+      e.classList.add('hotsauce')
+    })
+
   } else if (boardSevenArray[7].every(r => playerXChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player X Wins Board Eight!'
+    scoreboardmayo.innerHTML = 'Mayo Wins Board 8!'
+    boardEight.forEach(e => {
+      e.classList.add('mayo')
+    })
   }
 }
 
 function checkBoardEight() {
   if (boardEightArray[0].every(r => playerOChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player O Wins Board Nine!'
+    scoreboardsauce.innerHTML = 'Hot Sauce Wins Board 9!'
+    boardNine.forEach(e => {
+      e.classList.add('hotsauce')
+    })
+
   } else if (boardEightArray[0].every(r => playerXChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player X Wins Board Nine!'
+    scoreboardmayo.innerHTML = 'Mayo Wins Board 9!'
+    boardNine.forEach(e => {
+      e.classList.add('mayo')
+    })
+
   } else if (boardEightArray[1].every(r => playerOChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player O Wins Board Nine!'
+    scoreboardsauce.innerHTML = 'Hot Sauce Wins Board 9!'
+    boardNine.forEach(e => {
+      e.classList.add('hotsauce')
+    })
+
   } else if (boardEightArray[1].every(r => playerXChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player X Wins Board Nine!'
+    scoreboardmayo.innerHTML = 'Mayo Wins Board 9!'
+    boardNine.forEach(e => {
+      e.classList.add('mayo')
+    })
+
   } else if (boardEightArray[2].every(r => playerOChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player O Wins Board Nine!'
+    scoreboardsauce.innerHTML = 'Hot Sauce Wins Board 9!'
+    boardNine.forEach(e => {
+      e.classList.add('hotsauce')
+    })
+
   } else if (boardEightArray[2].every(r => playerXChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player X Wins Board Nine!'
+    scoreboardmayo.innerHTML = 'Mayo Wins Board 9!'
+    boardNine.forEach(e => {
+      e.classList.add('mayo')
+    })
+
   } else if (boardEightArray[3].every(r => playerOChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player O Wins Board Nine!'
+    scoreboardsauce.innerHTML = 'Hot Sauce Wins Board 9!'
+    boardNine.forEach(e => {
+      e.classList.add('hotsauce')
+    })
+
   } else if (boardEightArray[3].every(r => playerXChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player X Wins Board Nine!'
+    scoreboardmayo.innerHTML = 'Mayo Wins Board 9!'
+    boardNine.forEach(e => {
+      e.classList.add('mayo')
+    })
+
   } else if (boardEightArray[4].every(r => playerOChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player O Wins Board Nine!'
+    scoreboardsauce.innerHTML = 'Hot Sauce Wins Board 9!'
+    boardNine.forEach(e => {
+      e.classList.add('hotsauce')
+    })
+
   } else if (boardEightArray[4].every(r => playerXChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player X Wins Board Nine!'
+    scoreboardmayo.innerHTML = 'Mayo Wins Board 9!'
+    boardNine.forEach(e => {
+      e.classList.add('mayo')
+    })
+
   } else if (boardEightArray[5].every(r => playerOChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player O Wins Board Nine!'
+    scoreboardsauce.innerHTML = 'Hot Sauce Wins Board 9!'
+    boardNine.forEach(e => {
+      e.classList.add('hotsauce')
+    })
+
   } else if (boardEightArray[5].every(r => playerXChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player X Wins Board Nine!'
+    scoreboardmayo.innerHTML = 'Mayo Wins Board 9!'
+    boardNine.forEach(e => {
+      e.classList.add('mayo')
+    })
+
   } else if (boardEightArray[6].every(r => playerOChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player O Wins Board Nine!'
+    scoreboardsauce.innerHTML = 'Hot Sauce Wins Board 9!'
+    boardNine.forEach(e => {
+      e.classList.add('hotsauce')
+    })
+
   } else if (boardEightArray[6].every(r => playerXChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player X Wins Board Nine!'
+    scoreboardmayo.innerHTML = 'Mayo Wins Board 9!'
+    boardNine.forEach(e => {
+      e.classList.add('mayo')
+    })
+
   } else if (boardEightArray[7].every(r => playerOChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player O Wins Board Nine!'
+    scoreboardsauce.innerHTML = 'Hot Sauce Wins Board 9!'
+    boardNine.forEach(e => {
+      e.classList.add('hotsauce')
+    })
+
   } else if (boardEightArray[7].every(r => playerXChoices.includes(r))) {
-    scoreboard.innerHTML = 'Player X Wins Board Nine!'
+    scoreboardmayo.innerHTML = 'Mayo Wins Board 9!'
+    boardNine.forEach(e => {
+      e.classList.add('mayo')
+    })
   }
 }
