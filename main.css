@@ -7,18 +7,16 @@ body {
   display: flex;
   flex-direction: column;
   height: 100vh;
-  justify-content: center;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: whitesmoke;
-  background-color: #002b88;
-
+  flex-grow: 1;
 }
+
 
 main {
   display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: center;
+  justify-content: left;
+  flex-grow: 1;
+  background-color: coral;
 }
 
 
@@ -27,7 +25,6 @@ h1 {
 }
 
 button {
-  background-color: white;
   width: 200px;
   height: 40px;
   margin: 10px;
@@ -43,14 +40,58 @@ aside {
 }
 
 
+.pageborder {
+  flex-grow: 1;
+}
+
 .grid {
-  box-shadow: 0 0 20px 0 #ffffff;
+  box-shadow: 0 0 40px 0 #ffffff;
+  border-width: 10px;
   height: 100%;
   height: 600px;
   width: 600px;
   display: flex;
   flex-wrap: wrap;
-  margin: 25px;
+  margin: 10px;
+}
+
+
+.one {
+
+  background-color: #DB162F;  
+}
+
+.two {
+
+  background-color:#0075F2;  
+}
+
+.three {
+  background-color:#DB162F;  
+}
+
+.four {
+  background-color: #0075f2;
+}
+
+.five {
+  background-color:#DB162F;  
+}
+
+.six {
+  background-color: #0075f2;
+}
+
+.seven {
+  background-color:#DB162F;  
+}
+
+.eight {
+  background-color: #0075f2;
+}
+
+.nine {
+  background-color:#DB162F;  
 }
 
 
@@ -61,8 +102,8 @@ aside {
 
 
 .grid div {
-  border: 1px solid lightgrey;
   flex-grow: 1;
+  border: 0.5px solid rgb(255, 255, 255);
   height: 11.1%;
   width: 11.1%;
 }
@@ -79,7 +120,7 @@ aside {
 
 .endplay {
   pointer-events: none;
-  background-color: #b41515;
+  background-color: #000000;
 } 
 
 .mayo {
@@ -99,10 +140,7 @@ aside {
   padding: 10px;
   text-align: center;
   margin: 10px;
-  background-color: white;
-  color: #000000;
-  border-width: 1px;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background-color: #000000;
 }
 
 #scoreboardsauce {
@@ -111,7 +149,6 @@ aside {
   padding: 10px;
   text-align: center;
   margin: 10px;
-  background-color: white;
   color: #000000;
   border-width: 1px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;

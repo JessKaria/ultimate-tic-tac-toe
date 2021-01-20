@@ -7,10 +7,6 @@ const two = 'X'
 let playerTurn = true
 const scoreboardmayo = document.querySelector('#scoreboardmayo')
 const scoreboardsauce = document.querySelector('#scoreboardsauce')
-let player1BoardsWon = 0
-//console.log(player1BoardsWon)
-let player2BoardsWon = 0
-//console.log(player2BoardsWon)
 const gameCells = Array.from(document.querySelectorAll('.grid div'))
 //console.log(gameCells)
 
@@ -146,9 +142,6 @@ const boardSix = Array.from(document.querySelectorAll('.six'))
 const boardSeven = Array.from(document.querySelectorAll('.seven'))
 const boardEight = Array.from(document.querySelectorAll('.eight'))
 const boardNine = Array.from(document.querySelectorAll('.nine'))
-
-// !! <-----SELECTING THE CLASSES OF THE DIFFERENT BOARDS------> //
-
 
 
 //!!<-----CLEAN UP THE BOARD OF CLASSES TO STOP PEOPLE CLICKING TWICE-----> //
@@ -494,6 +487,8 @@ function choices(event) {
   sevenMove(cellNumber)
   eightMove(cellNumber)
   nineMove(cellNumber)
+  champion()
+
 
 }
 
@@ -1390,5 +1385,50 @@ function checkBoardEight() {
     boardNine.forEach(e => {
       e.classList.add('mayo')
     })
+  }
+}
+
+// !! <-----THIS WILL DETERMINE THE OVERALL CHAMPION OF THE GAME------> //
+
+function champion() {
+  if (boardOne[0].classList.contains('hotsauce') && boardTwo[0].classList.contains('hotsauce') && boardThree[0].classList.contains('hotsauce')) {
+    console.log('hotsaucewins')
+  } else if (boardOne[0].classList.contains('mayo') && boardTwo[0].classList.contains('mayo') && boardThree[0].classList.contains('mayo')) {
+    console.log('mayowins')
+
+  } else if (boardFour[0].classList.contains('hotsauce') && boardFive[0].classList.contains('hotsauce') && boardSix[0].classList.contains('hotsauce')) {
+    console.log('hotsaucewins')
+  } else if (boardFour[0].classList.contains('mayo') && boardFive[0].classList.contains('mayo') && boardSix[0].classList.contains('mayo')) {
+    console.log('mayowins')
+
+  } else if (boardSeven[0].classList.contains('hotsauce') && boardEight[0].classList.contains('hotsauce') && boardNine[0].classList.contains('hotsauce')) {
+    console.log('hotsaucewins')
+  } else if (boardSeven[0].classList.contains('mayo') && boardEight[0].classList.contains('mayo') && boardNine[0].classList.contains('mayo')) {
+    console.log('mayowins')
+  
+  } else if (boardOne[0].classList.contains('hotsauce') && boardFour[0].classList.contains('hotsauce') && boardSeven[0].classList.contains('hotsauce')) {
+    console.log('hotsaucewins')
+  } else if (boardOne[0].classList.contains('mayo') && boardFour[0].classList.contains('mayo') && boardSeven[0].classList.contains('mayo')) {
+    console.log('mayowins')
+
+  } else if (boardTwo[0].classList.contains('hotsauce') && boardFive[0].classList.contains('hotsauce') && boardEight[0].classList.contains('hotsauce')) {
+    console.log('hotsaucewins')
+  } else if (boardTwo[0].classList.contains('mayo') && boardFive[0].classList.contains('mayo') && boardEight[0].classList.contains('mayo')) {
+    console.log('mayowins')
+
+  } else if (boardThree[0].classList.contains('hotsauce') && boardSix[0].classList.contains('hotsauce') && boardNine[0].classList.contains('hotsauce')) {
+    console.log('hotsaucewins')
+  } else if (boardThree[0].classList.contains('mayo') && boardSix[0].classList.contains('mayo') && boardNine[0].classList.contains('mayo')) {
+    console.log('mayowins')
+
+  } else if (boardOne[0].classList.contains('hotsauce') && boardFive[0].classList.contains('hotsauce') && boardNine[0].classList.contains('hotsauce')) {
+    console.log('hotsaucewins')
+  } else if (boardOne[0].classList.contains('mayo') && boardFive[0].classList.contains('mayo') && boardNine[0].classList.contains('mayo')) {
+    console.log('mayowins')
+
+  } else if (boardThree[0].classList.contains('hotsauce') && boardFive[0].classList.contains('hotsauce') && boardSeven[0].classList.contains('hotsauce')) {
+    console.log('hotsaucewins')
+  } else if (boardThree[0].classList.contains('mayo') && boardFive[0].classList.contains('mayo') && boardSeven[0].classList.contains('mayo')) {
+    console.log('mayowins')
   }
 }
