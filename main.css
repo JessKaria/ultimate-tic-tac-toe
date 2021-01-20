@@ -10,7 +10,7 @@ body {
   justify-content: center;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: whitesmoke;
-  background: linear-gradient(to left, #DB162F 0%,#DB162F 50%,#DB162F 50%,#0075F2 50%, #0075F2 100%); /* W3C */
+  background-color: #002b88;
 
 }
 
@@ -79,7 +79,7 @@ aside {
 
 .endplay {
   pointer-events: none;
-  background-color: #000000;
+  background-color: #b41515;
 } 
 
 .mayo {
@@ -91,11 +91,6 @@ aside {
   pointer-events: none;
   background-color: #DB162F
 } 
-
-.saucewinicon {
-  background-image: url("/test.png");
-} 
-
 
 
 #scoreboardmayo {

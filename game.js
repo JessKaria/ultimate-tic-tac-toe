@@ -147,6 +147,10 @@ const boardSeven = Array.from(document.querySelectorAll('.seven'))
 const boardEight = Array.from(document.querySelectorAll('.eight'))
 const boardNine = Array.from(document.querySelectorAll('.nine'))
 
+// !! <-----SELECTING THE CLASSES OF THE DIFFERENT BOARDS------> //
+
+
+
 //!!<-----CLEAN UP THE BOARD OF CLASSES TO STOP PEOPLE CLICKING TWICE-----> //
 
 function cleanUp() {
@@ -182,7 +186,7 @@ function cleanUp() {
 //!!<-----FUNCTIONS TO CONTROL BOARD MOVEMENT-----> //
 
 function oneMove(cellNumber) {
-  if (lastMove[0].includes(cellNumber)) {
+  if (lastMove[0].includes(cellNumber) && !boardOne[0].classList.contains('mayo') && !boardOne[0].classList.contains('hotsauce')) {
     boardTwo.forEach(e => {
       e.classList.add('endplay')
     })
@@ -207,11 +211,11 @@ function oneMove(cellNumber) {
     boardNine.forEach(e => {
       e.classList.add('endplay')
     })
-  }
+  } 
 }
 
 function twoMove(cellNumber) {
-  if (lastMove[1].includes(cellNumber)) {
+  if (lastMove[1].includes(cellNumber) && !boardTwo[1].classList.contains('mayo') && !boardTwo[1].classList.contains('hotsauce')) {
     boardOne.forEach(e => {
       e.classList.add('endplay')
     })
@@ -240,7 +244,7 @@ function twoMove(cellNumber) {
 }
 
 function threeMove(cellNumber) {
-  if (lastMove[2].includes(cellNumber)) {
+  if (lastMove[2].includes(cellNumber) && !boardThree[2].classList.contains('mayo') && !boardThree[2].classList.contains('hotsauce')) {
     boardOne.forEach(e => {
       e.classList.add('endplay')
     })
@@ -269,7 +273,7 @@ function threeMove(cellNumber) {
 }
 
 function fourMove(cellNumber) {
-  if (lastMove[3].includes(cellNumber)) {
+  if (lastMove[3].includes(cellNumber) && !boardFour[3].classList.contains('mayo') && !boardFour[3].classList.contains('hotsauce')) {
     boardOne.forEach(e => {
       e.classList.add('endplay')
     }) 
@@ -298,7 +302,7 @@ function fourMove(cellNumber) {
 }
 
 function fiveMove(cellNumber) {
-  if (lastMove[4].includes(cellNumber)) {
+  if (lastMove[4].includes(cellNumber) && !boardFive[4].classList.contains('mayo') && !boardFive[4].classList.contains('hotsauce')) {
     boardOne.forEach(e => {
       e.classList.add('endplay')
     }) 
@@ -327,7 +331,7 @@ function fiveMove(cellNumber) {
 }
 
 function sixMove(cellNumber) {
-  if (lastMove[5].includes(cellNumber)) {
+  if (lastMove[5].includes(cellNumber) && !boardSix[5].classList.contains('mayo') && !boardSix[5].classList.contains('hotsauce')) {
     boardOne.forEach(e => {
       e.classList.add('endplay')
     }) 
@@ -356,7 +360,7 @@ function sixMove(cellNumber) {
 }
 
 function sevenMove(cellNumber) {
-  if (lastMove[6].includes(cellNumber)) {
+  if (lastMove[6].includes(cellNumber) && !boardSeven[6].classList.contains('mayo') && !boardSeven[6].classList.contains('hotsauce')) {
     boardOne.forEach(e => {
       e.classList.add('endplay')
     }) 
@@ -385,7 +389,7 @@ function sevenMove(cellNumber) {
 }
 
 function eightMove(cellNumber) {
-  if (lastMove[7].includes(cellNumber)) {
+  if (lastMove[7].includes(cellNumber) && !boardEight[7].classList.contains('mayo') && !boardEight[7].classList.contains('hotsauce')) {
     boardOne.forEach(e => {
       e.classList.add('endplay')
     }) 
@@ -414,7 +418,7 @@ function eightMove(cellNumber) {
 }
 
 function nineMove(cellNumber) {
-  if (lastMove[8].includes(cellNumber)) {
+  if (lastMove[8].includes(cellNumber) && !boardNine[8].classList.contains('mayo') && !boardNine[8].classList.contains('hotsauce')) {
     boardOne.forEach(e => {
       e.classList.add('endplay')
     }) 
@@ -494,7 +498,7 @@ function choices(event) {
 }
 
 
-//!!<-----CHECKING BOARD FOR A WIN ------>!!//
+//!!<-----CHECKING EACH GAMEBOARDS FOR A WIN IN DESCENDING ORDER GAME 1-9 ------>!!//
 
 function checkBoardZero() {
   if (boardZeroArray[0].every(r => playerOChoices.includes(r))) {
@@ -569,6 +573,7 @@ function checkBoardZero() {
       e.classList.add('mayo')
     })
 
+
   } else if (boardZeroArray[6].every(r => playerOChoices.includes(r))) {
     scoreboardsauce.innerHTML = 'Hot Sauce Wins Board 1!'
     boardOne.forEach(e => {
@@ -586,6 +591,7 @@ function checkBoardZero() {
     boardOne.forEach(e => {
       e.classList.add('hotsauce')
     })
+
 
   } else if (boardZeroArray[7].every(r => playerXChoices.includes(r))) {
     scoreboardmayo.innerHTML = 'Mayo Wins Board 1!'
