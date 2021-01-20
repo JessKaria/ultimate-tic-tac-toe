@@ -107,19 +107,26 @@
           <h2>Ultimate Tic-Tac-Toe</h2>
           <h3>The Rules</h3>
           <p>
-            Welcome to ultimate tic-tac-toe, you've got a smaller grid within each of those 9 squares: 
-            To win the game, you have to win three of the larger squares in a row, and to win a large square, 
-            you have to win three in a row in the smaller grid inside it.
+            Welcome to ultimate tic-tac-toe, in this game you have a smaller grid within each of those 9 squares: To win the game, you have to win three of the larger squares in a row, and to win a large square, you have to win three in a row in the smaller grid inside it.
+            <br><br>
+            Your next move is dictated by the last position the previous player took on the smaller grid. If that board has already been won, it will open the entire board up. (If you get confused, you can click any of the mustard colored cells.
+            <br><br>
+            Enjoy and sauce responsibly. 
           </p>
-          <div class="scoreboardsauce">
-            <div id="player1"></div>
+          <div>
+            <div id="score">
+              <div class="scoreboardsauce">
+              </div>
+              <div class="scoreboardmayo">
+              </div>
+   
+               <div id="player1">
+               </div>
+               <div id="player2"></div>
+               </div>
+            </div>
+         <button id="reset" onClick="window.location.reload();">Reload!</button>
           </div>
-          <div class="scoreboardmayo">
-            <div id="player2"></div>
-          </div>
-        </div>
-
-        <button id="reset" onClick="window.location.reload();">Reload!</button>
         
       </aside>
   

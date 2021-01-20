@@ -21,7 +21,7 @@ main {
   flex-grow: 1;
   background-color: rgb(0, 0, 0);
   box-shadow: 0 0 40px 0 #ffffff;
-  padding: 15px;
+  padding: 28px;
 }
 
 header {
@@ -43,6 +43,7 @@ h2 {
   color: #ffffff;
   font-weight: 500;
   margin: 10px;
+  
 }
 
 h3 {
@@ -50,6 +51,7 @@ h3 {
   color: #ffffff;
   font-weight: 500;
   margin: 10px;
+  text-decoration: underline;
 }
 
 button {
@@ -61,6 +63,7 @@ button {
 
 p {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 14px;
   margin: 10px;
 }
 
@@ -75,6 +78,7 @@ aside {
 }
 
 
+
 .grid {
   border-width: 10px;
   height: 100%;
@@ -87,40 +91,40 @@ aside {
 
 
 .one {
-  background-color: #fe0000;
+  background-color: #FFDD4A;
 }
 
 .two {
 
-  background-color:#0e0e0e;
+  background-color:#FFDD4A;
 }
 
 .three {
-  background-color:#fe0000; 
+  background-color:#FFDD4A;
 }
 
 .four {
-  background-color: #0e0e0e;
+  background-color: #FFDD4A;
 }
 
 .five {
-  background-color:#fe0000; 
+  background-color:#FFDD4A;
 }
 
 .six {
-  background-color: #0e0e0e;
+  background-color: #FFDD4A;
 }
 
 .seven {
-  background-color:#fe0000; 
+  background-color:#FFDD4A;
 }
 
 .eight {
-  background-color: #0e0e0e;
+  background-color: #FFDD4A;
 }
 
 .nine {
-  background-color: #fe0000;
+  background-color: #FFDD4A;
 }
 
 
@@ -144,17 +148,17 @@ aside {
 
 .endplay {
   pointer-events: none;
-  background-color: #4cdf12;
+  background-color: #000103;
 } 
 
 .mayo {
   pointer-events: none;
-  background-image: url("/mayowin.png");
+  background-color: #1098F7;
 } 
 
 .hotsauce {
   pointer-events: none;
-  background-image: url("/mayowin.png");
+  background-color: #FE5000;
 } 
 
 
@@ -167,6 +171,7 @@ aside {
   color: #000000;
   background-color: #ffffff;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  flex-grow: 1;
 }
 
 .scoreboardsauce {
@@ -178,6 +183,12 @@ aside {
   background-color: #ffffff;
   border-width: 1px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  flex-grow: 1;
 }
+
+#score {
+  display: flex;
+}
+
 
 
