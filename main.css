@@ -8,6 +8,7 @@ body {
   display: flex;
   flex-direction: column;
   height: 100vh;
+  width: 100%;
   flex-grow: 1;
   background-image: url("images/backgroundimage.jpg");
   font-family: 'Bowlby One SC', cursive;
@@ -15,10 +16,15 @@ body {
 
 @media only screen and (max-width: 600px) {
   body {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
     width: 280px;
-    background-image: url("images/mobileback.png")
+
   }
 }
+
 
 main {
   display: flex;
@@ -30,14 +36,6 @@ main {
   padding: 28px;
 }
 
-@media only screen and (max-width: 600px) {
-  main {
-    flex-direction: column;
-    flex-grow: 1;
-    width: 400px;
-    justify-content: center;
-  }
-}
 
 
 header {
@@ -54,12 +52,6 @@ h1 {
   text-align: center;
 }
 
-@media only screen and (max-width: 600px) {
-  h1 {
-    font-size: 20px;
-    text-align: center;
-  }
-}
 
 
 h2 {
@@ -69,11 +61,6 @@ h2 {
   margin: 10px;  
 }
 
-@media only screen and (max-width: 600px) {
-  h2 {
-    text-align: center;
-  }
-}
 
 
 h3 {
@@ -87,12 +74,6 @@ h3 {
   flex-grow: 1;
 }
 
-@media only screen and (max-width: 600px) {
-  h3 {
-    width: 280px;
-    text-align: center;
-  }
-}
 
 button {
   width: 200px;
@@ -105,14 +86,8 @@ p {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-size: 14px;
   margin: 10px;
-  width: 85%;
 }
 
-@media only screen and (max-width: 600px) {
-  p {
-  width: 280px;
-  }
-}
 
 
 aside {
@@ -125,16 +100,6 @@ aside {
   color: white;
 }
 
-@media only screen and (max-width: 600px) {
-  aside {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    width: none;
-  }
-}
 
 section {
   display: flex;
@@ -144,16 +109,7 @@ section {
   flex-grow: 1;
 }
 
-@media only screen and (max-width: 600px) {
-  section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    width: none;
-  }
-}
+
 
 .pageborder {
   display: flex;
@@ -257,10 +213,11 @@ section {
 } 
 
 .scoreboardmayo {
+  width: 250px;
   height: 40px;
-  padding: 10px;
-  text-align: center;
   margin: 10px;
+  padding: 5px;
+  text-align: center;
   color: #000000;
   background-color: #ffffff;
   font-size: 12px;
@@ -268,10 +225,11 @@ section {
 }
 
 .scoreboardsauce {
+  width: 250px;
   height: 40px;
-  padding: 10px;
   text-align: center;
   margin: 10px;
+  padding: 5px;
   color: #000000;
   font-size: 12px;
   background-color: #ffffff;
@@ -286,7 +244,6 @@ section {
   flex-grow: 1;
   background-color: #FE5000;
   width: 380px;
-  height: 100px;
   margin: 10px;
 }
 
@@ -328,21 +285,23 @@ section {
 
 #playerone {
   width: 250px;
+  height: 60px;
   margin: 10px;
   background-color: #ffffff;
   justify-content: space-around;
   background-size: contain;
-  background-image: url("images/hotsauceplayer.png");
+  background-image: url("images/hotsauceicon.png");
 }
 
 #playertwo {
   flex-grow: 1;
   width: 250px;
+  height: 60px;
   margin: 10px;
   background-color: #ffffff;
   justify-content: space-around;
   background-size: contain;
-  background-image: url("images/mayoplayer.png");
+  background-image: url("images/mayoicon.png");
 }
 
 
