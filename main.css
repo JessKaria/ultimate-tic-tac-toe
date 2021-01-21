@@ -1,3 +1,4 @@
+
 * {
   box-sizing: border-box;
 }
@@ -8,10 +9,15 @@ body {
   flex-direction: column;
   height: 100vh;
   flex-grow: 1;
-  background-image: url("https://cdn.shopify.com/s/files/1/0306/1016/1723/files/1_e07f3614-9ca3-4c80-86b9-942439f13a96.png?v=1606864470");
+  background-image: url("images/backgroundimage.jpg");
   font-family: 'Bowlby One SC', cursive;
+}
 
-
+@media only screen and (max-width: 600px) {
+  body {
+    width: 280px;
+    background-image: url("images/mobileback.png")
+  }
 }
 
 main {
@@ -24,9 +30,19 @@ main {
   padding: 28px;
 }
 
+@media only screen and (max-width: 600px) {
+  main {
+    flex-direction: column;
+    flex-grow: 1;
+    width: 400px;
+    justify-content: center;
+  }
+}
+
+
 header {
-  height: 80px;
-  margin: 40px;
+  height: 60px;
+  margin: 20px;
 }
 
 
@@ -38,19 +54,44 @@ h1 {
   text-align: center;
 }
 
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 20px;
+    text-align: center;
+  }
+}
+
+
 h2 {
-  font-size: 30px;
+  font-size: 28px;
   color: #ffffff;
   font-weight: 500;
   margin: 10px;  
 }
 
+@media only screen and (max-width: 600px) {
+  h2 {
+    text-align: center;
+  }
+}
+
+
 h3 {
-  font-size: 20px;
+  font-size: 24px;
   color: #ffffff;
   font-weight: 500;
-  margin: 10px;
+  margin: 5px;
+  width: 380px;
   text-decoration: underline;
+  text-align: left;
+  flex-grow: 1;
+}
+
+@media only screen and (max-width: 600px) {
+  h3 {
+    width: 280px;
+    text-align: center;
+  }
 }
 
 button {
@@ -64,7 +105,15 @@ p {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-size: 14px;
   margin: 10px;
+  width: 85%;
 }
+
+@media only screen and (max-width: 600px) {
+  p {
+  width: 280px;
+  }
+}
+
 
 aside {
   display: flex;
@@ -72,10 +121,45 @@ aside {
   align-items: center;
   justify-content: center;
   flex-grow: 1;
-  width: 300px;
+  width: 400px;
   color: white;
 }
 
+@media only screen and (max-width: 600px) {
+  aside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    width: none;
+  }
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+@media only screen and (max-width: 600px) {
+  section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    width: none;
+  }
+}
+
+.pageborder {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
 
 
 .grid {
@@ -86,6 +170,18 @@ aside {
   display: flex;
   flex-wrap: wrap;
   margin: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+  .grid {
+    border-width: 10px;
+    height: 100%;
+    height: 280px;
+    width: 280px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px;
+  }
 }
 
 
@@ -136,12 +232,12 @@ aside {
 }
 
 .grid div.X {
-  background-image: url("1.png");
+  background-image: url("images/1.png");
   background-size: cover;
 }
 
 .grid div.O {
-  background-image: url("2.png");
+  background-image: url("images/2.png");
   background-size: cover;
 }
 
@@ -160,8 +256,6 @@ aside {
   background-color: #FE5000;
 } 
 
-
-
 .scoreboardmayo {
   height: 40px;
   padding: 10px;
@@ -170,7 +264,6 @@ aside {
   color: #000000;
   background-color: #ffffff;
   font-size: 12px;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   flex-grow: 1;
 }
 
@@ -183,13 +276,76 @@ aside {
   font-size: 12px;
   background-color: #ffffff;
   border-width: 1px;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   flex-grow: 1;
 }
 
+
+#playerintro {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  background-color: #FE5000;
+  width: 380px;
+  height: 100px;
+  margin: 10px;
+}
+
+
+@media only screen and (max-width: 600px) {
+  #playerintro {
+    display: none;
+  }
+}
+
+
+
 #score {
   display: flex;
+  flex-grow: 1;
+  background-color: #FE5000;
+  width: 380px;
+  margin: 10px; 
 }
+
+@media only screen and (max-width: 600px) {
+  #score {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    width: 100%;
+  }
+}
+
+#reset {
+  width: 95%;
+  align-items: center;
+  font-family: 'Bowlby One SC', cursive;
+  background-color: #FE5000;
+  border: none;
+  color: white;
+  font-size: 16px;
+}
+
+#playerone {
+  width: 250px;
+  margin: 10px;
+  background-color: #ffffff;
+  justify-content: space-around;
+  background-size: contain;
+  background-image: url("images/hotsauceplayer.png");
+}
+
+#playertwo {
+  flex-grow: 1;
+  width: 250px;
+  margin: 10px;
+  background-color: #ffffff;
+  justify-content: space-around;
+  background-size: contain;
+  background-image: url("images/mayoplayer.png");
+}
+
+
 
 
 

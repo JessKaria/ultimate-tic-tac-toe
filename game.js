@@ -1,8 +1,6 @@
-//!!------WINNING ARRAYS BOARD MOVEMENT--------!!//
+//!!------VARIABLES--------!!//
 const playerXChoices = []
-//console.log(playerXChoices)
 const playerOChoices = []
-//console.log(playerOChoices)
 const one = 'O'
 const two = 'X'
 let playerTurn = true
@@ -24,9 +22,6 @@ const boardSeven = Array.from(document.querySelectorAll('.seven'))
 const boardEight = Array.from(document.querySelectorAll('.eight'))
 const boardNine = Array.from(document.querySelectorAll('.nine'))
 
-
-//const button = document.querySelector('button')
-//console.log('hello)
 
 //!!------WINNING ARRAYS BOARD MOVEMENT--------!!//
 
@@ -130,7 +125,6 @@ const boardEightArray = [
   [62, 70, 78]
 ]
 
-// !!------DICTATATES THE NEXT MOVE MUST BE MADE IN--------//
 
 // !! NEED TO USE THE BELOW ARRAYS AS STOP LISTS FOR WINNING THE BELOW BOARDS
 
@@ -145,12 +139,6 @@ const lastMove = [
   [19, 22, 25, 46, 49, 52, 73, 76, 79],
   [20, 23, 26, 47, 50, 53, 74, 77, 80]
 ]
-
-
-//!!<-----CLEAN UP THE BOARD OF CLASSES TO STOP PEOPLE CLICKING TWICE-----> //
-
-//const reset = document.querySelector('#reset')
-
 
 
 //!!<-----CLEAN UP THE BOARD OF CLASSES TO STOP PEOPLE CLICKING TWICE-----> //
@@ -497,8 +485,6 @@ function choices(event) {
   eightMove(cellNumber)
   nineMove(cellNumber)
   champion()
-
-
 }
 
 
