@@ -76,7 +76,7 @@ h2 {
 
 
 h3 {
-  font-size: 24px;
+  font-size: 28px;
   color: #ffffff;
   font-weight: 500;
   margin: 5px;
@@ -174,7 +174,7 @@ section {
 
 .two {
 
-  background-color:#FFDD4A;
+  background-color: #ffe135;
 }
 
 .three {
@@ -182,7 +182,7 @@ section {
 }
 
 .four {
-  background-color: #FFDD4A;
+  background-color: #ffe135;
 }
 
 .five {
@@ -190,7 +190,7 @@ section {
 }
 
 .six {
-  background-color: #FFDD4A;
+  background-color: #ffe135;
 }
 
 .seven {
@@ -198,7 +198,7 @@ section {
 }
 
 .eight {
-  background-color: #FFDD4A;
+  background-color: #ffe135;
 }
 
 .nine {
@@ -247,7 +247,6 @@ section {
   text-align: center;
   color: #000000;
   background-color: #ffffff;
-  font-size: 12px;
   flex-grow: 1;
 }
 
@@ -258,7 +257,6 @@ section {
   margin: 10px;
   padding: 5px;
   color: #000000;
-  font-size: 12px;
   background-color: #ffffff;
   border-width: 1px;
   flex-grow: 1;
@@ -274,7 +272,12 @@ section {
   margin: 10px;
 }
 
+@media only screen and (max-width: 600px) {
+  #playerintro {
+    display: none;
 
+  }
+}
 
 
 #score {
@@ -283,6 +286,12 @@ section {
   background-color: #FE5000;
   width: 380px;
   margin: 10px; 
+}
+
+@media only screen and (max-width: 600px) {
+  #score {
+    display: none;
+  }
 }
 
 
@@ -309,7 +318,14 @@ section {
   background-color: #ffffff;
   justify-content: space-around;
   background-size: contain;
-  background-image: url("images/hotsauceicon.png");
+  background-image: url("images/mayoicon.png");
+}
+
+@media only screen and (max-width: 600px) {
+  #playerone {
+    display: none;
+
+  }
 }
 
 #playertwo {
@@ -320,9 +336,15 @@ section {
   background-color: #ffffff;
   justify-content: space-around;
   background-size: contain;
-  background-image: url("images/mayoicon.png");
+  background-image: url("images/hotsauceicon.png");
 }
 
+@media only screen and (max-width: 600px) {
+  #playertwo {
+    display: none;
+
+  }
+}
 
 
 
