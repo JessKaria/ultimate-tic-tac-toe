@@ -168,46 +168,54 @@ section {
 
 
 .one {
-  background-color: #FFDD4A;
+  background-color: #ffe135;
+  border: 4px solid #1098F7;
 }
 
 .two {
 
   background-color: #ffe135;
+  border: 4px solid #fe5000;
 }
 
 .three {
-  background-color:#FFDD4A;
+  background-color:#ffe135;
+  border: 4px solid #1098F7;
 }
 
 .four {
   background-color: #ffe135;
+  border: 4px solid #fe5000;
 }
 
 .five {
-  background-color:#FFDD4A;
+  background-color:#ffe135;
+  border: 4px solid #1098F7;
 }
 
 .six {
   background-color: #ffe135;
+  border: 4px solid #fe5000;
 }
 
 .seven {
-  background-color:#FFDD4A;
+  background-color:#ffe135;
+  border: 4px solid #1098F7;
 }
 
 .eight {
   background-color: #ffe135;
+  border: 4px solid #fe5000;
 }
 
 .nine {
-  background-color: #FFDD4A;
+  background-color: #ffe135;
+  border: 4px solid #1098F7;
 }
 
 
 .grid div {
   flex-grow: 1;
-  border: 0.5px solid white;
   height: 11.1%;
   width: 11.1%;
   border-radius: 50%; 
@@ -249,6 +257,14 @@ section {
   flex-grow: 1;
 }
 
+@media only screen and (max-width: 600px) {
+  .scoreboardmayo {
+    width: 200px;
+    height: 50px;
+
+  }
+}
+
 .scoreboardsauce {
   width: 250px;
   height: 40px;
@@ -259,6 +275,14 @@ section {
   background-color: #ffffff;
   border-width: 1px;
   flex-grow: 1;
+}
+
+@media only screen and (max-width: 600px) {
+  .scoreboardsauce {
+    width: 200px;
+    height: 50px;
+
+  }
 }
 
 
@@ -273,11 +297,10 @@ section {
 
 @media only screen and (max-width: 600px) {
   #playerintro {
-    display: none;
+    width: 280px;
 
   }
 }
-
 
 #score {
   display: flex;
@@ -289,10 +312,10 @@ section {
 
 @media only screen and (max-width: 600px) {
   #score {
-    display: none;
+    width: 280px;
+
   }
 }
-
 
 #reset {
   width: 95%;
@@ -322,10 +345,12 @@ section {
 
 @media only screen and (max-width: 600px) {
   #playerone {
-    display: none;
+    width: 180px;
+    height: 40px;
 
   }
 }
+
 
 #playertwo {
   flex-grow: 1;
@@ -339,11 +364,13 @@ section {
 }
 
 @media only screen and (max-width: 600px) {
-  #playertwo {
-    display: none;
+  #playertwo  {
+    width: 180px;
+    height: 40px;
 
   }
 }
+
 
 
 

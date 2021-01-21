@@ -448,9 +448,7 @@ function choices(event) {
   const cell = event.target.id
   //get cell id to update arrays
   const cellStyle = event.target
-  //console.log(cellStyle)
   cellStyle.classList.add(playerCounter)
-  console.log(cell)
   //add the class of current cell
   playerTurn = !playerTurn
   //switch da current player using playerTurn Boolean
