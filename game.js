@@ -444,7 +444,6 @@ gameCells.forEach((cell) => {
 
 function choices(event) {
   const playerCounter = playerTurn ? one : two
-  console.log(playerCounter)
   const cell = event.target.id
   //get cell id to update arrays
   const cellStyle = event.target
@@ -1393,37 +1392,37 @@ function champion() {
     window.confirm('MAYONNAISE WINS! ')
 
   } else if (boardFour[0].classList.contains('hotsauce') && boardFive[0].classList.contains('hotsauce') && boardSix[0].classList.contains('hotsauce')) {
-    console.log('HOT SAUCE WINS!')
+    window.confirm('HOT SAUCE WINS!')
   } else if (boardFour[0].classList.contains('mayo') && boardFive[0].classList.contains('mayo') && boardSix[0].classList.contains('mayo')) {
     window.confirm('MAYONNAISE WINS')
 
   } else if (boardSeven[0].classList.contains('hotsauce') && boardEight[0].classList.contains('hotsauce') && boardNine[0].classList.contains('hotsauce')) {
-    console.log('HOT SAUCE WINS!')
+    window.confirm('HOT SAUCE WINS!')
   } else if (boardSeven[0].classList.contains('mayo') && boardEight[0].classList.contains('mayo') && boardNine[0].classList.contains('mayo')) {
     window.confirm('MAYONNAISE WINS')
   
   } else if (boardOne[0].classList.contains('hotsauce') && boardFour[0].classList.contains('hotsauce') && boardSeven[0].classList.contains('hotsauce')) {
-    console.log('HOT SAUCE WINS')
+    window.confirm('HOT SAUCE WINS')
   } else if (boardOne[0].classList.contains('mayo') && boardFour[0].classList.contains('mayo') && boardSeven[0].classList.contains('mayo')) {
     window.confirm('MAYONNAISE WINS')
 
   } else if (boardTwo[0].classList.contains('hotsauce') && boardFive[0].classList.contains('hotsauce') && boardEight[0].classList.contains('hotsauce')) {
-    console.log('HOT SAUCE WINS')
+    window.confirm('HOT SAUCE WINS')
   } else if (boardTwo[0].classList.contains('mayo') && boardFive[0].classList.contains('mayo') && boardEight[0].classList.contains('mayo')) {
     window.confirm('MAYONNAISE WINS')
 
   } else if (boardThree[0].classList.contains('hotsauce') && boardSix[0].classList.contains('hotsauce') && boardNine[0].classList.contains('hotsauce')) {
-    console.log('HOT SAUCE WINS')
+    window.confirm('HOT SAUCE WINS')
   } else if (boardThree[0].classList.contains('mayo') && boardSix[0].classList.contains('mayo') && boardNine[0].classList.contains('mayo')) {
     window.confirm('MAYONNAISE WINS')
 
   } else if (boardOne[0].classList.contains('hotsauce') && boardFive[0].classList.contains('hotsauce') && boardNine[0].classList.contains('hotsauce')) {
-    console.log('HOT SAUCE WINS')
+    window.confirm('HOT SAUCE WINS')
   } else if (boardOne[0].classList.contains('mayo') && boardFive[0].classList.contains('mayo') && boardNine[0].classList.contains('mayo')) {
     window.confirm('MAYONNAISE WINS')
 
   } else if (boardThree[0].classList.contains('hotsauce') && boardFive[0].classList.contains('hotsauce') && boardSeven[0].classList.contains('hotsauce')) {
-    console.log('HOT SAUCE WINS')
+    window.confirm('HOT SAUCE WINS')
   } else if (boardThree[0].classList.contains('mayo') && boardFive[0].classList.contains('mayo') && boardSeven[0].classList.contains('mayo')) {
     window.confirm('MAYONNAISE WINS')
   }
