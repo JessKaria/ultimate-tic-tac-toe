@@ -52,7 +52,7 @@ This was my first time building anything, so I was nervous but also really excit
 
 
 ## Identifying and storing element ID in an array.
-
+```
 const boardZeroArray = [
   [0, 1, 2],
   [9, 10, 11],
@@ -63,14 +63,14 @@ const boardZeroArray = [
   [0, 10, 20],
   [2, 10, 18]
 ]
-
+```
 I hard coded the winning combinations for each of the boards and stored them in an array of arrays. I would use the index of the array to then check the players choices against these hard-coded winning combinations. After testing this logic out I was confident I could scale out the same methodology to build the larger game scenario.
 
 
 ## Identifying and storing ID cellnumber of the users click
 
 The next thing I wanted to achieve was adding event listeners to all the cells and storing their location by ID in an array or player 1 choices and player 2 choices. I passed a second parameter into that event listener and used my choices function to then return the cell ID and store it in a global array that I could later use to test against my choices.
-
+```
 gameCells.forEach((cell) => {
   cell.addEventListener('click', choices)
 })
@@ -88,12 +88,12 @@ function choices(event) {
     playerOChoices.push(cellNumber)
   }
 }
-
+```
 
 ## Game movement
 
 Once I had worked out the win logic for the wider game, I wanted to use the same idea to control the movement of the board. I solved this by using another array of arrays and using this to add classes to the cells that were not in play.
-
+```
 const lastMove = [
   [0, 3, 6, 27, 30, 33, 54, 57, 60],
   [1, 4, 7, 28, 31, 34, 55, 58, 61],
@@ -105,14 +105,15 @@ const lastMove = [
   [19, 22, 25, 46, 49, 52, 73, 76, 79],
   [20, 23, 26, 47, 50, 53, 74, 77, 80]
 ]
-
+```
 The below function applied the 'endplay' class below which prevented players from placing a counter in an area of the board that wasn't in play. The function also checked if the board had already been won by a player and in that case would open the entire board up to play!
-
+```
 .endplay {
   pointer-events: none;
   background-color: #000103;
 } 
-
+```
+```
 function oneMove(cellNumber) {
   if (lastMove[0].includes(cellNumber) && !boardOne[0].classList.contains('mayo') && !boardOne[0].classList.contains('hotsauce')) {
     boardTwo.forEach(e => {
@@ -141,7 +142,7 @@ function oneMove(cellNumber) {
     })
   } 
 }
-
+```
 ## Wins !
 
 ![ultimate-tic-tac-toe](https://github.com/JessKaria/ultimate-tic-tac-toe/blob/main/images/Sauce.png)
