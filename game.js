@@ -436,8 +436,6 @@ function nineMove(cellNumber) {
 
 //!!<-----PLAYER ASSIGNMENT EVENT-----> //
 
-//Apply event listeners across all the grid cells, 
-// second parameter will be passed to choices function
 gameCells.forEach((cell) => {
   cell.addEventListener('click', choices)
 })
@@ -445,19 +443,14 @@ gameCells.forEach((cell) => {
 function choices(event) {
   const playerCounter = playerTurn ? one : two
   const cell = event.target.id
-  //get cell id to update arrays
   const cellStyle = event.target
   cellStyle.classList.add(playerCounter)
-  //add the class of current cell
   playerTurn = !playerTurn
-  //switch da current player using playerTurn Boolean
-  //parse the string as a Number
   const cellNumber = parseFloat(cell)
   if (playerTurn === true) {
     playerXChoices.push(cellNumber)
   } else {
     playerOChoices.push(cellNumber)
-    //push the cell number to the player 1 + player 2 saved choices array 
   }
   cleanUp() 
   checkBoardZero()
