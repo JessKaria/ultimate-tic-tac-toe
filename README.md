@@ -48,7 +48,7 @@ This was my first time building anything, so I was nervous but also really excit
 
 ## The Game!
 
-![ultimate-tic-tac-toe](https://github.com/JessKaria/ultimate-tic-tac-toe/blob/main/images/Tic-Tac-Toe.gif)
+![ultimate-tic-tac-toe](https://github.com/JessKaria/ultimate-tic-tac-toe/blob/main/images/ReadMeGamePlay.gif)
 
 
 ## Identifying and storing element ID in an array.
