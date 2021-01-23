@@ -152,7 +152,7 @@ One of our stretch goals was to make the game responsive, and I was super happy 
 
 ## Bugs !
 
-The game doesn't have any bugs, but there are most definatley a few improvements I would like to make!
+Currently after a player has one you can continue to click and register moves on the board. I want to add a scoreboard and a 'Play Again' button which will clear the board for another round.
 
 ## Potential future features
 
@@ -164,7 +164,7 @@ The game doesn't have any bugs, but there are most definatley a few improvements
 
 ## What I learned...
 
-My biggest learning would be to refactor as I go, I started off with this intention but as I got on my code became more reptative and harder to untangle, a rookie mistake. This was such a fun and rewarding experience and I am already keen to start on another!
+My biggest learning would be to refactor as I go, I started off with this intention but as I got on my code became more reptative and harder to untangle, a rookie mistake. As this was my first time making anything, my main goal was to have a working game and build my confidence in writing code. This was such a great first project to work on and I can't wait to start the next one!
 
 
 
