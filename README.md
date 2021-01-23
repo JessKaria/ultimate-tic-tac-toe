@@ -1,13 +1,17 @@
 
 ### ![GA](https://cloud.githubusercontent.com/assets/40461/8183776/469f976e-1432-11e5-8199-6ac91363302b.png) General Assembly, SEI 
 
+<<<<<<< HEAD
 ## Ultimate-tic-tac-toe | Hot Sauce Edition
+=======
+## Ultimate-Tic-Tac-Toe | Hot Sauce Edition
+>>>>>>> baadbd766d2cda7717b3579a388d0dff0fe19632
 
  
 
 ## Overview
 
-This was my first project at General Assembly immersive course at GA London. We were tasked with creating a grid-based game to be rendered in the browser, and deployed online. We were given seven days to complete the project and were expected to build the project on our own.
+This was my first project at General Assembly SEI course at GA London. We were tasked with creating a grid-based game to be rendered in the browser, and deployed online. We were given seven days to complete the project and were expected to build the project on our own.
 
 Being my first time making anything, I opted for Ultimate Tic-Tac-Toe, but recreated the game with my own spicy twist.
 
@@ -48,7 +52,7 @@ This was my first time building anything, so I was nervous but also really excit
 
 ## The Game!
 
-![ultimate-tic-tac-toe](https://github.com/JessKaria/ultimate-tic-tac-toe/blob/main/images/Tic-Tac-Toe.gif)
+![ultimate-tic-tac-toe](https://github.com/JessKaria/ultimate-tic-tac-toe/blob/main/images/ReadMeGamePlay.gif)
 
 
 ## Identifying and storing element ID in an array.
@@ -152,7 +156,7 @@ One of our stretch goals was to make the game responsive, and I was super happy 
 
 ## Bugs !
 
-The game doesn't have any bugs, but there are most definatley a few improvements I would like to make!
+Currently after a player has one you can continue to click and register moves on the board. I want to add a scoreboard and a 'Play Again' button which will clear the board for another round.
 
 ## Potential future features
 
@@ -164,7 +168,7 @@ The game doesn't have any bugs, but there are most definatley a few improvements
 
 ## What I learned...
 
-My biggest learning would be to refactor as I go, I started off with this intention but as I got on my code became more reptative and harder to untangle, a rookie mistake. This was such a fun and rewarding experience and I am already keen to start on another!
+My biggest learning would be to refactor as I go, I started off with this intention but as I got on my code became more reptative and harder to untangle, a rookie mistake. As this was my first time making anything, my main goal was to have a working game and build my confidence in writing code. This was such a great first project to work on and I can't wait to start the next one!
 
 
 
