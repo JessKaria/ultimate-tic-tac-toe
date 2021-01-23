@@ -1,13 +1,13 @@
 
 ### ![GA](https://cloud.githubusercontent.com/assets/40461/8183776/469f976e-1432-11e5-8199-6ac91363302b.png) General Assembly, SEI 
 
-## Ultimate-tic-tac-toe | Hot Sauce Edition
+## Ultimate-Tic-Tac-Toe | Hot Sauce Edition
 
  
 
 ## Overview
 
-This was my first project at General Assembly immersive course at GA London. We were tasked with creating a grid-based game to be rendered in the browser, and deployed online. We were given seven days to complete the project and were expected to build the project on our own.
+This was my first project at General Assembly SEI course at GA London. We were tasked with creating a grid-based game to be rendered in the browser, and deployed online. We were given seven days to complete the project and were expected to build the project on our own.
 
 Being my first time making anything, I opted for Ultimate Tic-Tac-Toe, but recreated the game with my own spicy twist.
 
