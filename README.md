@@ -1,13 +1,8 @@
 
 ### ![GA](https://cloud.githubusercontent.com/assets/40461/8183776/469f976e-1432-11e5-8199-6ac91363302b.png) General Assembly, SEI 
 
-<<<<<<< HEAD
-## Ultimate-tic-tac-toe | Hot Sauce Edition
-=======
-## Ultimate-Tic-Tac-Toe | Hot Sauce Edition
->>>>>>> baadbd766d2cda7717b3579a388d0dff0fe19632
 
- 
+## Ultimate-tic-tac-toe | Hot Sauce Edition 
 
 ## Overview
 
