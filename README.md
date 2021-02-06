@@ -151,7 +151,7 @@ One of our stretch goals was to make the game responsive, and I was super happy 
 
 ## Bugs !
 
-Currently after a player has one you can continue to click and register moves on the board. I want to add a scoreboard and a 'Play Again' button which will clear the board for another round.
+Currently after a player has won you can continue to click and register moves on the board. I want to add a scoreboard and a 'Play Again' button which will clear the board for another round.
 
 ## Potential future features
 
