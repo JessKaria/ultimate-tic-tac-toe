@@ -1,5 +1,4 @@
-
-### ![GA](https://cloud.githubusercontent.com/assets/40461/8183776/469f976e-1432-11e5-8199-6ac91363302b.png) General Assembly, SEI 
+![GA](https://cloud.githubusercontent.com/assets/40461/8183776/469f976e-1432-11e5-8199-6ac91363302b.png) General Assembly, SEI 
 
 
 ## Ultimate-Tic-Tac-Toe | Hot Sauce Edition 
@@ -66,7 +65,7 @@ const boardZeroArray = [
 I hard coded the winning combinations for each of the boards and stored them in an array of arrays. I would use the index of the array to then check the players choices against these hard-coded winning combinations. After testing this logic out I was confident I could scale out the same methodology to build the larger game scenario.
 
 
-## Identifying and storing ID cellnumber of the users click
+## Identifying and storing ID cell number of the users click
 
 The next thing I wanted to achieve was adding event listeners to all the cells and storing their location by ID in an array or player 1 choices and player 2 choices. I passed a second parameter into that event listener and used my choices function to then return the cell ID and store it in a global array that I could later use to test against my choices.
 ```
@@ -163,13 +162,4 @@ Currently after a player has won you can continue to click and register moves on
 
 ## What I learned...
 
-My biggest learning would be to refactor as I go, I started off with this intention but as I got on my code became more reptative and harder to untangle, a rookie mistake. As this was my first time making anything, my main goal was to have a working game and build my confidence in writing code. This was such a great first project to work on and I can't wait to start the next one!
-
-
-
-
-
-
-
-
-
+My biggest learning would be to refactor as I go, I started off with this intention but as I got on my code became more repetitive and harder to untangle, a rookie mistake. As this was my first time making anything, my main goal was to have a working game and build my confidence in writing code. This was such a great first project to work on and I can't wait to start the next one!
