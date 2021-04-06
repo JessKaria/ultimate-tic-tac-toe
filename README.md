@@ -27,7 +27,7 @@ You can play the game on GitHub pages [here](https://jesskaria.github.io/ultimat
 
 * [Ultimate Tic-Tac-Toe: The Rules - Youtube](https://www.youtube.com/watch?v=37PC0bGMiTI)
 
-## Technologies used !
+## Technologies used!
 
 - HTML
 - CSS
@@ -62,7 +62,7 @@ const boardZeroArray = [
   [2, 10, 18]
 ]
 ```
-I hard coded the winning combinations for each of the boards and stored them in an array of arrays. I would use the index of the array to then check the players choices against these hard-coded winning combinations. After testing this logic out I was confident I could scale out the same methodology to build the larger game scenario.
+I hard-coded the winning combinations for each of the boards and stored them in an array of arrays. I would use the index of the array to then check the players choices against these hard-coded winning combinations. After testing this logic out I was confident I could scale out the same methodology to build the larger game scenario.
 
 
 ## Identifying and storing ID cell number of the users click
@@ -104,7 +104,7 @@ const lastMove = [
   [20, 23, 26, 47, 50, 53, 74, 77, 80]
 ]
 ```
-The below function applied the 'endplay' class below which prevented players from placing a counter in an area of the board that wasn't in play. The function also checked if the board had already been won by a player and in that case would open the entire board up to play!
+The below function applied the 'endplay' class below which prevented players from placing a counter in an area of the board that wasn't in play. The function also checked if the board had already been won by a player and in that case, would open the entire board up to play!
 ```
 .endplay {
   pointer-events: none;
@@ -150,7 +150,7 @@ One of our stretch goals was to make the game responsive, and I was super happy 
 
 ## Bugs !
 
-Currently after a player has won you can continue to click and register moves on the board. I want to add a scoreboard and a 'Play Again' button which will clear the board for another round.
+Currently, after a player has won you can continue to click and register moves on the board. I want to add a scoreboard and a 'Play Again' button which will clear the board for another round.
 
 ## Potential future features
 
@@ -162,4 +162,4 @@ Currently after a player has won you can continue to click and register moves on
 
 ## What I learned...
 
-My biggest learning would be to refactor as I go, I started off with this intention but as I got on my code became more repetitive and harder to untangle, a rookie mistake. As this was my first time making anything, my main goal was to have a working game and build my confidence in writing code. This was such a great first project to work on and I can't wait to start the next one!
+My biggest learning would be to refactor as I go, I started off with this intention but as I got on my code became more repetitive and harder to untangle, a rookie mistake. As this was my first time making anything, my main goal was to have a working game and build my confidence in writing code. This was such a great first project to work on, and I can't wait to start the next one!
